@@ -1,0 +1,13 @@
+# https://leoanimesh.github.io/robots.txt
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Block aggressive AI-content crawlers if you prefer (uncomment to enable)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+
+Sitemap: https://leoanimesh.github.io/sitemap.xml

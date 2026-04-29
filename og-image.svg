@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="20%" cy="0%" r="90%">
+      <stop offset="0%" stop-color="#1c1410"/>
+      <stop offset="60%" stop-color="#0b0b0c"/>
+      <stop offset="100%" stop-color="#0b0b0c"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.50"/>
+      <stop offset="60%" stop-color="#ea580c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#fb923c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Layers -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="120" cy="100" r="380" fill="url(#glow1)"/>
+  <circle cx="1100" cy="520" r="430" fill="url(#glow2)"/>
+
+  <!-- Faint hairlines for texture -->
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <line x1="0" y1="160" x2="1200" y2="160" stroke-width="1"/>
+    <line x1="0" y1="540" x2="1200" y2="540" stroke-width="1"/>
+  </g>
+
+  <!-- Content -->
+  <g font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#f5f5f4">
+
+    <!-- Status pill -->
+    <g transform="translate(96, 110)">
+      <circle cx="8" cy="8" r="8" fill="#ea580c"/>
+      <text x="32" y="14" font-size="22" font-weight="500" letter-spacing="3"
+            font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+            fill="#a8a29e">FRONTEND ENGINEER · BENGALURU</text>
+    </g>
+
+    <!-- Headline -->
+    <text x="96" y="280" font-size="92" font-weight="700" letter-spacing="-3">Animesh Mondal</text>
+
+    <!-- Subhead -->
+    <text x="96" y="360" font-size="42" font-weight="500" fill="#d6d3d1" letter-spacing="-0.5">
+      <tspan>Building mobile and web products that </tspan>
+      <tspan font-style="italic" font-weight="700" fill="#fb923c">ship</tspan>
+      <tspan>.</tspan>
+    </text>
+
+    <!-- Tech stack ribbon -->
+    <text x="96" y="478" font-size="22"
+          font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+          fill="#a8a29e">React Native · React · TypeScript · Next.js · Stripe · Server-Driven UI</text>
+
+    <!-- Footer URL -->
+    <text x="96" y="560" font-size="22" font-weight="500"
+          font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+          fill="#71717a">leoanimesh.github.io</text>
+
+    <!-- Top-right brand mark -->
+    <g transform="translate(1040, 84)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#fafaf9"/>
+      <text x="32" y="46" text-anchor="middle" font-size="40" font-weight="700" fill="#0a0a0a">A</text>
+    </g>
+  </g>
+</svg>
