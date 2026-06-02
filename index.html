@@ -199,7 +199,15 @@
     <section class="hero reveal" aria-labelledby="hero-title">
       <p class="eyebrow">Frontend Engineer · Bengaluru, India</p>
       <h1 id="hero-title" class="hero-title">
-        Building mobile and web products that <em>ship</em>.
+        Building mobile and web products that
+        <span class="word-rotator" aria-live="polite">
+          <span class="word-rotator-inner">
+            <em data-word>ship</em>
+            <em data-word>scale</em>
+            <em data-word>delight</em>
+            <em data-word>last</em>
+          </span>
+        </span>.
       </h1>
       <p class="hero-lead">
         I'm Animesh — a frontend engineer who lives at the intersection of <strong>design</strong> and <strong>code</strong>. I care about thoughtful interfaces, performance, accessibility, and the small details that make products feel <em>polished and reliable</em>.
@@ -227,11 +235,15 @@
       <div class="cards">
         <article class="card">
           <div class="card-head">
-            <h3 class="card-title">Zoca</h3>
-            <span class="card-tag">Founding Engineer · Live</span>
+            <img class="card-icon" src="assets/icons/zoca.png" alt="Zoca app icon" width="64" height="64" loading="lazy" decoding="async" />
+            <div class="card-head-text">
+              <h3 class="card-title">Zoca</h3>
+              <p class="card-subtitle">AI marketing for local businesses</p>
+              <span class="card-tag">Founding Engineer · Live</span>
+            </div>
           </div>
           <p class="card-desc">
-            An all-in-one platform for local service businesses — mobile and web apps for booking, payments, and growth. Foundation backed a successful <strong>$6M seed round</strong>.
+            An AI-powered platform that brings clients to salons, spas, and wellness businesses on autopilot — client discovery, lead conversion, and retention without dashboards or marketing teams. Trusted by <strong>1,000+ businesses</strong>. Foundation backed a successful <strong>$6M seed round</strong>.
           </p>
 
           <h4 class="card-subhead">What I shipped</h4>
@@ -260,11 +272,15 @@
 
         <article class="card">
           <div class="card-head">
-            <h3 class="card-title">Chrone</h3>
-            <span class="card-tag">Frontend Lead · Live</span>
+            <img class="card-icon" src="assets/icons/chrone.png" alt="Chrone app icon" width="64" height="64" loading="lazy" decoding="async" />
+            <div class="card-head-text">
+              <h3 class="card-title">Chrone</h3>
+              <p class="card-subtitle">AI-led local marketing</p>
+              <span class="card-tag">Frontend Lead · Live</span>
+            </div>
           </div>
           <p class="card-desc">
-            A B2B SaaS platform helping merchants attract more customers through automated marketing and reviews. Scaled adoption to <strong>500+ businesses</strong> and <strong>$1M+ ARR</strong>.
+            A B2B SaaS that helps local merchants rank on Google, win more leads, and earn 5-star reviews through automated marketing. Scaled adoption to <strong>500+ businesses</strong> and <strong>$1M+ ARR</strong>.
           </p>
 
           <h4 class="card-subhead">What I shipped</h4>
@@ -281,6 +297,36 @@
           </ul>
           <div class="card-links">
             <a href="https://apps.apple.com/in/app/chrone-get-more-customers/id1610101236" target="_blank" rel="noopener">App Store ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <img class="card-icon" src="assets/icons/grovely.png" alt="Grovely app icon" width="64" height="64" loading="lazy" decoding="async" />
+            <div class="card-head-text">
+              <h3 class="card-title">Grovely</h3>
+              <p class="card-subtitle">Puzzle your day</p>
+              <span class="card-tag">Solo Project · Live</span>
+            </div>
+          </div>
+          <p class="card-desc">
+            A polished daily-play puzzle app — <strong>Jigsaw, Sudoku, Sliding Tile, and Memory Match</strong> in one experience. Built and shipped solo, end-to-end: design, native modules, backend, store listing.
+          </p>
+
+          <h4 class="card-subhead">What I built</h4>
+          <ul class="card-list">
+            <li>Designed and built <strong>four distinct puzzle engines</strong> sharing a single level system, XP, and three-star scoring.</li>
+            <li>Implemented a <strong>daily challenge</strong> with streak tracking and reset logic, plus a progressive level map.</li>
+            <li>Built an <strong>offline-first</strong> architecture with cloud backup, so progress follows the player across devices.</li>
+            <li>Crafted the full polish layer — <strong>haptics, sound, dark/light mode, custom avatars</strong>, and full-screen scene photography.</li>
+            <li>Shipped to the App Store solo, including store assets, screenshots, and review flow.</li>
+          </ul>
+
+          <ul class="card-meta">
+            <li>React Native</li><li>TypeScript</li><li>Reanimated</li><li>Cloud Sync</li><li>Offline-first</li>
+          </ul>
+          <div class="card-links">
+            <a href="https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592" target="_blank" rel="noopener">App Store ↗</a>
           </div>
         </article>
       </div>

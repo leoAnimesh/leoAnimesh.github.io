@@ -511,6 +511,63 @@ main {
   font-weight: 700;
 }
 
+/* =========================================
+   Hero word rotator (ship / scale / delight / last)
+   ========================================= */
+.word-rotator {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+  height: 1.1em;
+  width: var(--rotator-w, auto);
+  transition: width 0.55s var(--ease);
+}
+.word-rotator-inner {
+  display: inline-flex;
+  flex-direction: column;
+  transform: translateY(var(--rotator-y, 0));
+  transition: transform 0.6s var(--ease);
+}
+.word-rotator em {
+  display: inline-flex;
+  align-items: center;
+  height: 1.1em;
+  white-space: nowrap;
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 700;
+  padding-right: 0.04em;
+}
+/* Subtle accent underline that follows the active word */
+.word-rotator::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.06em;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--accent) 70%, transparent),
+    transparent
+  );
+  transform: scaleX(0.4);
+  opacity: 0.55;
+  transition: transform 0.6s var(--ease), opacity 0.6s var(--ease);
+}
+.word-rotator.is-changing::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word-rotator-inner { transition: none; }
+  .word-rotator { transition: none; }
+}
+
 .hero-lead {
   margin-top: 1.5rem;
   font-size: 1.08rem;
@@ -649,21 +706,53 @@ main {
 
 .card-head {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.card-icon {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 13px; /* iOS continuous-corner feel */
+  box-shadow:
+    0 1px 0 0 color-mix(in srgb, var(--fg) 8%, transparent) inset,
+    0 8px 22px -12px rgba(0, 0, 0, 0.35),
+    0 0 0 1px color-mix(in srgb, var(--fg) 6%, transparent);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.card:hover .card-icon,
+.card.is-tilted .card-icon {
+  transform: translateY(-2px) rotate(-2deg);
+  box-shadow:
+    0 1px 0 0 color-mix(in srgb, var(--fg) 8%, transparent) inset,
+    0 14px 28px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.card-head-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 .card-title {
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.card-subtitle {
+  font-size: 0.86rem;
+  color: var(--fg-muted);
+  line-height: 1.3;
 }
 .card-tag {
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   color: var(--fg-subtle);
-  white-space: nowrap;
+  letter-spacing: 0.02em;
+  margin-top: 0.15rem;
 }
 .card-desc {
   color: var(--fg-muted);
@@ -913,6 +1002,7 @@ main {
 .section.reveal.is-visible .card:nth-child(2),
 .section.reveal.is-visible .timeline-item:nth-child(2),
 .section.reveal.is-visible .skill-group:nth-child(2) { animation-delay: 0.15s; }
+.section.reveal.is-visible .card:nth-child(3),
 .section.reveal.is-visible .timeline-item:nth-child(3),
 .section.reveal.is-visible .skill-group:nth-child(3) { animation-delay: 0.25s; }
 .section.reveal.is-visible .skill-group:nth-child(4) { animation-delay: 0.35s; }

@@ -140,6 +140,42 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Hero word rotator (ship / scale / delight / last) ---------- */
+  const rotator = document.querySelector('.word-rotator');
+  if (rotator && !reduceMotion) {
+    const inner = rotator.querySelector('.word-rotator-inner');
+    const words = Array.from(rotator.querySelectorAll('[data-word]'));
+    if (inner && words.length > 1) {
+      let idx = 0;
+
+      const setTo = (i) => {
+        const target = words[i];
+        const w = target.getBoundingClientRect().width;
+        const lineH = target.getBoundingClientRect().height;
+        rotator.style.setProperty('--rotator-w', `${Math.ceil(w)}px`);
+        inner.style.setProperty('--rotator-y', `-${i * lineH}px`);
+        rotator.classList.add('is-changing');
+        clearTimeout(rotator._t);
+        rotator._t = setTimeout(() => rotator.classList.remove('is-changing'), 650);
+      };
+
+      // Initial sizing once fonts are ready (so width measures correctly)
+      const init = () => setTo(idx);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(init);
+      } else {
+        init();
+      }
+      // Resize handler — re-measure when viewport (and font sizes) change
+      window.addEventListener('resize', () => setTo(idx), { passive: true });
+
+      setInterval(() => {
+        idx = (idx + 1) % words.length;
+        setTo(idx);
+      }, 2400);
+    }
+  }
+
   /* ===========================================================
    * Interactive layer (skipped if reduced motion or coarse pointer)
    * =========================================================== */
