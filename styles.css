@@ -734,8 +734,11 @@ main {
   min-width: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.15rem;
+  text-align: left;
 }
+.card-head-text > * { width: auto; }
 .card-title {
   font-size: 1.2rem;
   font-weight: 600;
