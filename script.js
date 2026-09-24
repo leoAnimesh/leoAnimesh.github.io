@@ -343,7 +343,7 @@
 
   /* --------------------------------------------------------
    * Pointer effects: fine pointers only, never with reduced
-   * motion. Spotlight, magnetic buttons, 3D tilt.
+   * motion. Spotlight, 3D tilt.
    * ------------------------------------------------------ */
   if (finePointer) {
     doc.querySelectorAll('[data-spot]').forEach((el) => {
@@ -356,25 +356,6 @@
   }
 
   if (finePointer && motion) {
-    // Magnetic: element leans toward the cursor, springs back on leave.
-    doc.querySelectorAll('[data-magnetic]').forEach((el) => {
-      el.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') el.classList.add('is-mag'); });
-      el.addEventListener('pointermove', (e) => {
-        if (e.pointerType !== 'mouse') return;
-        const b = el.getBoundingClientRect();
-        const max = b.width > 240 ? 4 : 7;
-        const dx = clamp((e.clientX - (b.left + b.width / 2)) * 0.22, -max, max);
-        const dy = clamp((e.clientY - (b.top + b.height / 2)) * 0.3, -max, max);
-        el.style.setProperty('--tx', dx.toFixed(2) + 'px');
-        el.style.setProperty('--ty', dy.toFixed(2) + 'px');
-      }, { passive: true });
-      el.addEventListener('pointerleave', () => {
-        el.classList.remove('is-mag');
-        el.style.setProperty('--tx', '0px');
-        el.style.setProperty('--ty', '0px');
-      });
-    });
-
     // 3D tilt, lerped in rAF so it glides instead of snapping.
     const tilt = (el, opt) => {
       let tx = 0, ty = 0, cx = 0, cy = 0, tl = 0, cl = 0;

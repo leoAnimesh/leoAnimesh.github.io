@@ -131,10 +131,9 @@ main { display: block; }
   display: flex; align-items: center; justify-content: center;
   border-radius: 10px; border: 1px solid rgba(var(--fg-rgb), 0.14);
   background: transparent; color: var(--text); cursor: pointer;
-  transition: border-color .2s, background-color .2s,
-    translate var(--mag-dur, .7s) var(--mag-ease, var(--spring-soft)), scale .4s var(--spring);
+  transition: border-color .2s, background-color .2s, scale .4s var(--spring);
 }
-.themebtn:active { scale: .9; transition-duration: .2s, .2s, .25s, .1s; }
+.themebtn:active { scale: .9; transition-duration: .2s, .2s, .1s; }
 .themebtn:hover { border-color: rgba(var(--fg-rgb), 0.3); background: rgba(var(--fg-rgb), 0.04); }
 .themebtn svg { animation: spin .6s var(--ease); }
 .themebtn .i-moon { display: none; }
@@ -217,10 +216,9 @@ main { display: block; }
   border-radius: 12px; font-family: inherit; font-size: 15px; font-weight: 500;
   cursor: pointer; border: 1px solid transparent; white-space: nowrap;
   position: relative; isolation: isolate; overflow: hidden;
-  transition: background-color .2s, border-color .25s, box-shadow .3s, color .2s,
-    translate var(--mag-dur, .7s) var(--mag-ease, var(--spring-soft)), scale .45s var(--spring);
+  transition: background-color .2s, border-color .25s, box-shadow .3s, color .2s, scale .45s var(--spring);
 }
-.btn:active { scale: .97; transition-duration: .2s, .25s, .3s, .2s, .25s, .1s; }
+.btn:active { scale: .97; transition-duration: .2s, .25s, .3s, .2s, .1s; }
 .btn svg { flex-shrink: 0; transition: transform .35s var(--spring); }
 .btn-primary { background: var(--inv); color: var(--bg); font-weight: 600; }
 .btn-primary:hover { color: var(--bg); background: var(--inv-hover); box-shadow: 0 10px 32px -10px rgba(var(--fg-rgb), 0.45); }
@@ -551,7 +549,7 @@ main { display: block; }
 /* ==========================================================
  * Motion & micro-interactions
  * transform / opacity only; hover transforms gated to real
- * hover devices; JS-driven effects (tilt, magnetic, nav pill,
+ * hover devices; JS-driven effects (tilt, nav pill,
  * staggered reveals) are enabled only for fine pointers and
  * when reduced motion is off.
  * ========================================================== */
@@ -635,8 +633,6 @@ main { display: block; }
 @keyframes mm-out { to { opacity: 0; transform: translateY(-6px); } }
 
 /* ---------- buttons ---------- */
-[data-magnetic].is-mag { --mag-dur: .3s; --mag-ease: var(--ease-out); }
-[data-magnetic] { translate: var(--tx, 0px) var(--ty, 0px); }
 .btn-primary::before {
   content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: linear-gradient(105deg, transparent 30%, rgba(var(--accent-rgb), 0.32) 50%, transparent 70%);
@@ -817,6 +813,5 @@ main { display: block; }
     scroll-behavior: auto !important;
   }
   .hero-grid, .badge::after, .dot::after { animation: none !important; }
-  [data-magnetic] { translate: none !important; }
   .card, .pcard { transform: none !important; }
 }
