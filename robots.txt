@@ -2,9 +2,8 @@
 
 User-agent: *
 Allow: /
-Disallow:
 
-# Block aggressive AI-content crawlers if you prefer (uncomment to enable)
+# Block AI-training crawlers if you prefer (uncomment to enable)
 # User-agent: GPTBot
 # Disallow: /
 # User-agent: CCBot

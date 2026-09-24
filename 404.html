@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Page not found — Animesh Mondal</title>
+  <meta name="description" content="This page doesn't exist. Head back to the portfolio of Animesh Mondal, Frontend &amp; Mobile Architect." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('am.theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .nf { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
+    .nf .nav { position: relative; }
+    .nf-main { position: relative; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 64px var(--gx); }
+    .nf-code { font-size: clamp(96px, 20vw, 240px); line-height: .9; font-weight: 600; letter-spacing: -0.06em; }
+    .nf-code .line > span { animation-delay: 80ms; }
+    .nf-main p { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: var(--muted); max-width: 540px; }
+    .nf-main .actions { margin-top: 4px; }
+    .nf .hero-grid { -webkit-mask-image: radial-gradient(ellipse 60% 70% at 25% 50%, #000 10%, transparent 75%); mask-image: radial-gradient(ellipse 60% 70% at 25% 50%, #000 10%, transparent 75%); }
+    .nf .hero-spot { background: radial-gradient(560px circle at 22% 55%, rgba(var(--accent-rgb), 0.09), transparent 60%); }
+  </style>
+</head>
+<body>
+  <div class="pf nf">
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Animesh Mondal, home">
+        <span class="mark" aria-hidden="true">AM</span>
+        <span class="brandname">Animesh Mondal</span>
+      </a>
+    </header>
+    <main class="nf-main" id="main">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-spot" aria-hidden="true"></div>
+      <p class="badge rise" style="--d: 0ms; position: relative;"><span class="dot" aria-hidden="true"></span>Error 404 · Page not found</p>
+      <h1 class="nf-code"><span class="line"><span>404</span></span></h1>
+      <p class="rise" style="--d: 260ms; position: relative;">This page doesn't exist or has moved. The work, experience and contact details are all on the home page.</p>
+      <div class="actions rise" style="--d: 360ms; position: relative;">
+        <a class="btn btn-primary" href="/">Back to home</a>
+        <a class="btn btn-secondary" href="/#work">View projects</a>
+        <a class="btn btn-ghost" href="/#contact">Contact</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

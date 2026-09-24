@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>AM — Animesh Mondal</title>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0a0a"/>
-      <stop offset="100%" stop-color="#1a1a1d"/>
-    </linearGradient>
+    <radialGradient id="g" cx="30%" cy="18%" r="95%">
+      <stop offset="0" stop-color="#1a1d23"/>
+      <stop offset=".6" stop-color="#0c0e12"/>
+      <stop offset="1" stop-color="#090a0d"/>
+    </radialGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle"
-        font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif"
-        font-size="40" font-weight="700" fill="#fafaf9">A</text>
-  <circle cx="50" cy="14" r="4" fill="#ea580c"/>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/><rect x="0.256" y="0.256" width="63.488" height="63.488" rx="13.744" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="0.512"/>
+  <path fill="#f4f5f7" d="M15.64 44.71L11.74 44.71L19.18 19.29L24.05 19.29L31.50 44.71L27.60 44.71L21.62 23.19L15.64 44.71ZM27.35 38.09L15.89 38.09L17.04 34.61L26.20 34.61L27.35 38.09ZM43.81 41.63L40.95 41.63L36.58 23.44L36.98 23.41L36.98 44.71L33.36 44.71L33.36 19.29L38.37 19.29L43.10 38.59L41.67 38.59L46.39 19.29L51.40 19.29L51.40 44.71L47.79 44.71L47.79 23.41L48.18 23.44L43.81 41.63Z"/>
+  
 </svg>

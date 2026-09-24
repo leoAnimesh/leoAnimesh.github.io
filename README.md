@@ -7,8 +7,16 @@ portfolio/
 ├── index.html               # Markup + content + structured data
 ├── styles.css               # Design system + layout + interactions
 ├── script.js                # Theme toggle, parallax, micro-interactions
-├── favicon.svg              # Inline-style monogram favicon
-├── og-image.svg             # 1200x630 social card (convert to .png — see below)
+├── assets/
+│   ├── img/animesh-mondal.{avif,webp,jpg}  # Hero portrait (AVIF/WebP with JPG fallback)
+│   ├── icons/*.png                   # Project app icons (Grovely, LoomBox, Zoca, Repruvia)
+│   └── Animesh-Mondal-Resume.pdf     # Résumé linked from the nav
+├── 404.html                 # Branded not-found page (GitHub Pages serves it automatically)
+├── favicon.svg / favicon.ico        # "AM" monogram (SVG + 16/32/48 ICO)
+├── apple-touch-icon.png             # 180×180
+├── icon-192.png / icon-512.png      # PWA icons
+├── icon-maskable-512.png            # PWA maskable icon (content inside the safe zone)
+├── og-image.png / og-image.svg      # 1200×630 social card + its source
 ├── manifest.webmanifest     # PWA-lite metadata
 ├── robots.txt               # Crawl rules + sitemap pointer
 └── sitemap.xml              # Search-engine sitemap
@@ -62,40 +70,10 @@ The portfolio ships with full SEO baked into `index.html`:
 - **Theme color meta tags** that flip between light/dark for browser chrome on iOS/Android.
 - **Performance hints** — `preconnect` and `dns-prefetch` for Google Fonts, `preload` for the stylesheet.
 
-### Generate the PNG OG image (required)
+### Icons & social card
 
-Most social platforms (Twitter/X, LinkedIn, Slack) only render PNG/JPG OG images, not SVG. Convert `og-image.svg` to `og-image.png` once:
-
-**Option 1 — ImageMagick (CLI)**
-```bash
-brew install imagemagick    # macOS
-magick og-image.svg -resize 1200x630 og-image.png
-```
-
-**Option 2 — Inkscape (CLI)**
-```bash
-inkscape og-image.svg --export-type=png --export-filename=og-image.png \
-  --export-width=1200 --export-height=630
-```
-
-**Option 3 — Online**
-Open `og-image.svg` in a browser, take a 1200×630 screenshot, save as `og-image.png`.
-
-Commit the PNG alongside the rest of the files.
-
-### Apple touch icon (optional but recommended)
-
-Generate `apple-touch-icon.png` (180×180) and `favicon.ico` from `favicon.svg`:
-
-```bash
-# 180×180 apple touch icon
-magick favicon.svg -resize 180x180 apple-touch-icon.png
-
-# Multi-size .ico
-magick favicon.svg -define icon:auto-resize=16,32,48 favicon.ico
-```
-
-Or use a free service like https://realfavicongenerator.net/ — upload `favicon.svg`, download the bundle, drop the files in next to `index.html`.
+All icons and `og-image.png` are already generated from the brand mark (Geist / Geist Mono glyphs converted to outlines, so they render the same everywhere). If you edit `og-image.svg`, re-export it at 1200×630, e.g. open it in Chrome and screenshot it, or run
+`"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --screenshot=og-image.png --window-size=1200,630 og-image.svg`.
 
 ### After deploying — submit your site
 
@@ -120,18 +98,16 @@ Or use a free service like https://realfavicongenerator.net/ — upload `favicon
 ## What's inside (engineering choices)
 
 - **No framework, no build step.** Loads instantly, deploys anywhere static.
-- **CSS custom properties** drive the entire design system; `data-theme` swaps the palette in one attribute.
-- **System theme by default** — first visit follows the OS preference; user override is persisted in `localStorage`. Live changes to the OS theme propagate when no override is set.
-- **View Transitions API** for an animated circular-reveal theme switch, with a graceful 550ms cross-fade fallback.
-- **IntersectionObserver** reveal-on-scroll with staggered children. `prefers-reduced-motion` fully respected.
-- **Cursor-tracking spotlight** across the entire viewport, plus 3D card tilt and magnetic primary buttons (skipped on coarse pointers).
-- **Sticky blurred header**, ambient drifting gradient blobs, fixed left/right rails (social links + scroll progress) — all rendered on devices ≥1100px.
-- **Accessible by default:** semantic landmarks, skip link, visible focus rings, `aria-pressed` on toggle, ARIA labels on icons.
+- **Design:** Geist + Geist Mono, a near-black (`#0c0e12`) / warm off-white (`#fafaf7`) palette with a single emerald accent (`#34d399`, darkened via `color-mix` in light mode). Breakpoints follow the design canvas (1440 / 834 / 390).
+- **Theme:** dark by default, follows the OS until the visitor picks one; the pick is stored in `localStorage` (`am.theme`). A tiny inline script in `<head>` applies it before first paint. Switching uses a circular View Transition that grows from the toggle button.
+- **Motion:** staggered hero line-reveal, word-by-word section headings, IntersectionObserver reveals, metric and GPA count-ups with a settle "tick", drifting hero grid, a nav pill that slides between links, magnetic + springy buttons, arrow fly-through on link hover, copy-icon to check-mark morph, 3D tilt with glare on the portrait and project cards, cursor-following border glow, an experience timeline that draws itself in, staggered stack chips, and a burger that morphs into a close icon. Everything animates `transform`/`opacity` only. Pointer effects run only on fine pointers, and `prefers-reduced-motion` turns motion off.
+- **Copy-to-clipboard email** with a toast, falling back to `mailto:` when the clipboard is unavailable.
+- **Accessible by default:** semantic landmarks, skip link, visible focus rings, 44px touch targets, ARIA labels on icon buttons, `aria-expanded` on the mobile menu (Escape closes it).
 - **SEO + share-ready** — see SEO checklist above.
 
 ## Customizing
 
-- **Content:** edit `index.html` directly. Sections are clearly labeled with HTML comments.
-- **Colors / typography:** all design tokens live at the top of `styles.css` under `:root` (light) and `[data-theme='dark']` (dark).
-- **Sections:** add new sections by copying any `<section class="section reveal">` block.
-- **Adding a new project:** duplicate any `<article class="card">` block inside the `#work` section.
+- **Content:** edit `index.html` directly. Sections are numbered in HTML comments (`01 HERO` … `07 CONTACT`).
+- **Colors / typography:** design tokens live at the top of `styles.css` under `:root` (dark) and `:root[data-theme="light"]`. Change `--accent-raw` / `--accent-rgb` to re-tint the whole site.
+- **Adding a project:** duplicate any `<div data-reveal><article class="card">…</article></div>` block inside `#work`; set `--tint` (an `r,g,b` triple) for the icon glow.
+- **Metrics:** each `.metric .n` carries `data-count`, `data-prefix`, `data-suffix` and `data-decimals`; its text content is the final value shown without JS.

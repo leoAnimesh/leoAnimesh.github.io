@@ -5,70 +5,89 @@
        Charset, viewport, primary metadata
        ==================================================== -->
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)" />
-
-  <title>Animesh Mondal — Frontend Engineer (React Native &amp; React)</title>
-  <meta name="description" content="Animesh Mondal is a frontend engineer in Bengaluru specializing in React Native and React. Founding engineer at Zoca; shipped mobile and web apps used by 500+ businesses." />
-  <meta name="keywords" content="Animesh Mondal, frontend engineer, React Native developer, React engineer, mobile engineer, Next.js developer, TypeScript, Bengaluru, Zoca, portfolio" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Animesh Mondal — Frontend &amp; Mobile Architect | React Native</title>
+  <meta name="description" content="Frontend &amp; Mobile Architect in Bengaluru building React Native, Server-Driven UI and native systems. Frontend Lead at Zoca ($3M+ ARR, 500+ businesses)." />
   <meta name="author" content="Animesh Mondal" />
+  <meta name="keywords" content="Animesh Mondal, frontend architect, mobile architect, React Native developer, server-driven UI, React engineer, Swift, SwiftUI, Next.js developer, TypeScript, Bengaluru, Zoca, Grovely, LoomBox, Repruvia, portfolio" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)" />
+  <meta name="application-name" content="Animesh Mondal" />
+  <meta name="apple-mobile-web-app-title" content="Animesh" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://leoanimesh.github.io/" />
+  <link rel="me" href="https://github.com/leoanimesh" />
+  <link rel="me" href="https://linkedin.com/in/leoanimesh" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- ====================================================
-       Open Graph / Facebook
+       Open Graph (Facebook, LinkedIn, Slack, WhatsApp, iMessage)
        ==================================================== -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Animesh Mondal" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://leoanimesh.github.io/" />
-  <meta property="og:title" content="Animesh Mondal — Frontend Engineer" />
-  <meta property="og:description" content="Frontend engineer in Bengaluru building production-grade React Native and React apps. Founding engineer at Zoca." />
+  <meta property="og:title" content="Animesh Mondal — Frontend &amp; Mobile Architect" />
+  <meta property="og:description" content="React Native, Server-Driven UI and production native systems. Frontend Lead at Zoca ($3M+ ARR, 500+ businesses) and solo builder of App Store apps." />
   <meta property="og:image" content="https://leoanimesh.github.io/og-image.png" />
   <meta property="og:image:secure_url" content="https://leoanimesh.github.io/og-image.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Animesh Mondal — Frontend Engineer specializing in React Native and React" />
+  <meta property="og:image:alt" content="Animesh Mondal, Frontend &amp; Mobile Architect: name card with portrait, AM monogram and headline metrics on a dark background" />
+  <meta property="profile:first_name" content="Animesh" />
+  <meta property="profile:last_name" content="Mondal" />
+  <meta property="profile:username" content="leoanimesh" />
 
   <!-- ====================================================
-       Twitter Card
+       Twitter / X card
        ==================================================== -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://leoanimesh.github.io/" />
-  <meta name="twitter:title" content="Animesh Mondal — Frontend Engineer" />
-  <meta name="twitter:description" content="Frontend engineer building production-grade React Native and React apps. Founding engineer at Zoca." />
+  <meta name="twitter:title" content="Animesh Mondal — Frontend &amp; Mobile Architect" />
+  <meta name="twitter:description" content="React Native, Server-Driven UI and production native systems. Frontend Lead at Zoca and solo builder of App Store apps." />
   <meta name="twitter:image" content="https://leoanimesh.github.io/og-image.png" />
-  <meta name="twitter:image:alt" content="Animesh Mondal — Frontend Engineer" />
+  <meta name="twitter:image:alt" content="Animesh Mondal, Frontend &amp; Mobile Architect: name card with portrait and AM monogram" />
   <meta name="twitter:creator" content="@leoanimesh" />
 
   <!-- ====================================================
-       Favicons + PWA manifest
+       Icons + PWA manifest
        ==================================================== -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" sizes="48x48" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
 
+  <!-- Apply saved / system theme before first paint (no flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('am.theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- ====================================================
-       Performance hints
+       Performance: connect early, fetch the LCP portrait first
        ==================================================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-  <link rel="preload" href="styles.css" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/img/animesh-mondal.avif" type="image/avif" fetchpriority="high" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" />
   <link rel="stylesheet" href="styles.css" />
 
   <!-- ====================================================
-       Structured data — Person + WebSite (JSON-LD)
+       Structured data (JSON-LD): Person, Organization, WebSite,
+       ProfilePage and the selected work as SoftwareApplication.
        ==================================================== -->
   <script type="application/ld+json">
   {
@@ -78,11 +97,13 @@
         "@type": "Person",
         "@id": "https://leoanimesh.github.io/#person",
         "name": "Animesh Mondal",
+        "givenName": "Animesh",
+        "familyName": "Mondal",
         "alternateName": "leoanimesh",
         "url": "https://leoanimesh.github.io/",
-        "image": "https://leoanimesh.github.io/og-image.png",
-        "jobTitle": "Frontend Engineer",
-        "description": "Frontend engineer specializing in React Native and React. Founding engineer at Zoca.",
+        "image": { "@id": "https://leoanimesh.github.io/#portrait" },
+        "jobTitle": "Frontend & Mobile Architect",
+        "description": "Frontend & Mobile Architect specializing in React Native, Server-Driven UI and production native systems. Founding Frontend Engineer and Frontend Lead at Zoca.",
         "email": "mailto:mondalarup808@gmail.com",
         "telephone": "+91-86175-24338",
         "address": {
@@ -91,29 +112,27 @@
           "addressRegion": "Karnataka",
           "addressCountry": "IN"
         },
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Zoca",
-          "url": "https://www.zoca.com/"
-        },
+        "worksFor": { "@id": "https://leoanimesh.github.io/#zoca" },
         "alumniOf": {
           "@type": "CollegeOrUniversity",
           "name": "JIS College of Engineering"
         },
         "knowsAbout": [
           "React Native",
-          "React",
-          "TypeScript",
-          "Next.js",
-          "JavaScript",
-          "Mobile Development",
-          "Frontend Architecture",
+          "React Native New Architecture (Fabric, TurboModules)",
           "Server-Driven UI",
-          "Stripe Payments",
-          "Native Module Development",
-          "Performance Optimization",
-          "Accessibility",
-          "CI/CD"
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Swift",
+          "SwiftUI",
+          "Kotlin",
+          "React Native Skia",
+          "Offline-first apps",
+          "Tap to Pay on iPhone",
+          "Stripe Terminal",
+          "CI/CD",
+          "Accessibility"
         ],
         "sameAs": [
           "https://github.com/leoanimesh",
@@ -121,350 +140,480 @@
         ]
       },
       {
+        "@type": "Organization",
+        "@id": "https://leoanimesh.github.io/#zoca",
+        "name": "Zoca",
+        "url": "https://zoca.com/"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://leoanimesh.github.io/#portrait",
+        "url": "https://leoanimesh.github.io/assets/img/animesh-mondal.jpg",
+        "contentUrl": "https://leoanimesh.github.io/assets/img/animesh-mondal.jpg",
+        "width": 900,
+        "height": 1062,
+        "caption": "Portrait of Animesh Mondal"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://leoanimesh.github.io/#ogimage",
+        "url": "https://leoanimesh.github.io/og-image.png",
+        "contentUrl": "https://leoanimesh.github.io/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "Animesh Mondal — Frontend & Mobile Architect"
+      },
+      {
         "@type": "WebSite",
         "@id": "https://leoanimesh.github.io/#website",
         "url": "https://leoanimesh.github.io/",
-        "name": "Animesh Mondal — Portfolio",
-        "description": "Portfolio of Animesh Mondal, a frontend engineer building production-grade React Native and React applications.",
-        "inLanguage": "en-US",
+        "name": "Animesh Mondal",
+        "alternateName": "Animesh Mondal — Portfolio",
+        "description": "Portfolio of Animesh Mondal, a Frontend & Mobile Architect building React Native, web and native Apple apps.",
+        "inLanguage": "en",
+        "author": { "@id": "https://leoanimesh.github.io/#person" },
         "publisher": { "@id": "https://leoanimesh.github.io/#person" }
       },
       {
         "@type": "ProfilePage",
         "@id": "https://leoanimesh.github.io/#profilepage",
         "url": "https://leoanimesh.github.io/",
-        "name": "Animesh Mondal — Frontend Engineer",
+        "name": "Animesh Mondal — Frontend & Mobile Architect",
         "isPartOf": { "@id": "https://leoanimesh.github.io/#website" },
         "about": { "@id": "https://leoanimesh.github.io/#person" },
-        "primaryImageOfPage": "https://leoanimesh.github.io/og-image.png",
-        "inLanguage": "en-US"
+        "mainEntity": { "@id": "https://leoanimesh.github.io/#person" },
+        "primaryImageOfPage": { "@id": "https://leoanimesh.github.io/#ogimage" },
+        "hasPart": { "@id": "https://leoanimesh.github.io/#work" },
+        "dateModified": "2026-09-24",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://leoanimesh.github.io/#work",
+        "name": "Selected work",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Grovely",
+              "alternateName": "Grovely: Puzzle your day",
+              "description": "A daily puzzle game with Jigsaw, Sudoku, Sliding Tile and Memory Match: 4 games, 174 levels, offline-first, with daily challenges and streaks.",
+              "applicationCategory": "GameApplication",
+              "operatingSystem": "iOS, Android",
+              "url": "https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592",
+              "sameAs": ["https://play.google.com/store/apps/details?id=com.grovely"],
+              "image": "https://leoanimesh.github.io/assets/icons/grovely.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "LoomBox",
+              "alternateName": "LoomBox: Save anything",
+              "description": "A private, native inbox for links, reels, PDFs, screenshots and places. Stored on-device with no account, no server and zero trackers.",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "iOS, iPadOS, macOS",
+              "url": "https://loombox.in",
+              "installUrl": "https://apps.apple.com/us/app/loombox-save-anything/id6770147676",
+              "image": "https://leoanimesh.github.io/assets/icons/loombox.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Zoca",
+              "description": "Operating system for salons, spas and wellness businesses: calendar booking, client and service management, payments with Tap to Pay, and an AI chatbot.",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "iOS, Android, Web",
+              "url": "https://zoca.com",
+              "installUrl": "https://apps.apple.com/us/app/zoca-grow-your-local-business/id6738140998",
+              "image": "https://leoanimesh.github.io/assets/icons/zoca.png",
+              "publisher": { "@id": "https://leoanimesh.github.io/#zoca" },
+              "contributor": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Repruvia",
+              "description": "Open-source browser bug reporter and session capture for Chrome, with canvas annotation and client-side LLM vision drafting.",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Chrome",
+              "url": "https://repruvia.github.io",
+              "sameAs": ["https://github.com/repruvia/repruvia.github.io"],
+              "image": "https://leoanimesh.github.io/assets/icons/repruvia.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          }
+        ]
       }
     ]
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+<div class="pf" id="pf">
 
-  <!-- Ambient background blobs + global cursor spotlight -->
-  <div class="ambient" aria-hidden="true">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <div class="cursor-spotlight"></div>
-  </div>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Left rail: vertical social links -->
-  <aside class="rail rail-left" aria-hidden="true">
-    <ul class="rail-socials">
-      <li><a href="https://github.com/leoanimesh" target="_blank" rel="noopener">github</a></li>
-      <li><a href="https://linkedin.com/in/leoanimesh" target="_blank" rel="noopener">linkedin</a></li>
-      <li><a href="mailto:mondalarup808@gmail.com">email</a></li>
-    </ul>
-    <span class="rail-line"></span>
-  </aside>
-
-  <!-- Right rail: signature + scroll progress -->
-  <aside class="rail rail-right" aria-hidden="true">
-    <span class="rail-text">scroll</span>
-    <span class="rail-progress"><span class="rail-progress-fill"></span></span>
-  </aside>
-
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Primary">
-      <a href="#" class="brand" aria-label="Animesh Mondal — home">
-        <span class="brand-mark" aria-hidden="true">A</span>
-        <span class="brand-name">Animesh</span>
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
-        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-      </button>
+  <!-- 00 NAV -->
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Animesh Mondal, back to top">
+      <span class="mark" aria-hidden="true">AM</span>
+      <span class="brandname">Animesh Mondal</span>
+    </a>
+    <nav class="navlinks" aria-label="Primary">
+      <a class="nl" href="#work" data-nav="work">Work</a>
+      <a class="nl" href="#experience" data-nav="experience">Experience</a>
+      <a class="nl" href="#stack" data-nav="stack">Stack</a>
+      <a class="nl" href="#contact" data-nav="contact">Contact</a>
     </nav>
+    <div class="navright">
+      <a class="btn btn-secondary btn-sm resume" data-magnetic href="assets/Animesh-Mondal-Resume.pdf" download="Animesh-Mondal-Resume.pdf" aria-label="Resume (PDF)"><span class="t">Resume</span>
+        <svg class="i-down" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+      </a>
+      <button class="themebtn" id="theme-toggle" type="button" data-magnetic aria-label="Switch to light theme" title="Switch to light theme">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.9 4.9l1.4 1.4"/><path d="M17.7 17.7l1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M4.9 19.1l1.4-1.4"/><path d="M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="menubtn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu">
+        <svg class="i-burger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="b1" d="M4 8h16"/><path class="b2" d="M4 16h16"/></svg>
+      </button>
+    </div>
+    <nav class="mmenu" id="mmenu" aria-label="Mobile" hidden>
+      <a href="#work">Work <span class="mono">03</span></a>
+      <a href="#experience">Experience <span class="mono">04</span></a>
+      <a href="#stack">Stack <span class="mono">05</span></a>
+      <a href="#contact">Contact <span class="mono">07</span></a>
+    </nav>
+    <div class="progress" id="progress" aria-hidden="true"></div>
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero reveal" aria-labelledby="hero-title">
-      <p class="eyebrow">Frontend Engineer · Bengaluru, India</p>
-      <h1 id="hero-title" class="hero-title">
-        Building mobile and web products that
-        <span class="word-rotator" aria-live="polite">
-          <span class="word-rotator-inner">
-            <em data-word>ship</em>
-            <em data-word>scale</em>
-            <em data-word>delight</em>
-            <em data-word>last</em>
-          </span>
-        </span>.
-      </h1>
-      <p class="hero-lead">
-        I'm Animesh — a frontend engineer who lives at the intersection of <strong>design</strong> and <strong>code</strong>. I care about thoughtful interfaces, performance, accessibility, and the small details that make products feel <em>polished and reliable</em>.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">View work</a>
-        <a class="btn btn-ghost" href="mailto:mondalarup808@gmail.com">Get in touch →</a>
+    <!-- 01 HERO -->
+    <section id="top" class="hero" data-spot aria-labelledby="hero-name">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-spot" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="badge rise" style="--d: 0ms"><span class="dot" aria-hidden="true"></span><span class="long">Available for founding &amp; senior roles · Bengaluru / Remote</span><span class="short">Open to founding &amp; senior roles</span></p>
+        <div class="hero-head">
+          <h1 class="name" id="hero-name"><span class="line"><span style="animation-delay: 80ms">Animesh</span></span> <span class="line"><span style="animation-delay: 180ms">Mondal</span></span></h1>
+          <p class="role rise" style="--d: 340ms">Frontend &amp; Mobile Architect <span>specializing in React Native, Server‑Driven UI and production native systems.</span></p>
+        </div>
+        <p class="lede rise" style="--d: 440ms">3+ years building high‑throughput consumer and commercial software. At Zoca I architected the mobile and web products that scaled a B2B SaaS platform from line zero to <strong>$3M+ ARR across 500+ businesses</strong> — and I ship solo indie apps to the App Store and Google Play.</p>
+        <div class="actions rise" style="--d: 540ms">
+          <a class="btn btn-primary" href="#work" data-magnetic>View projects
+            <svg class="i-down" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+          </a>
+          <button class="btn btn-secondary" type="button" data-copy-email data-magnetic aria-label="Copy email address mondalarup808@gmail.com">
+            <span class="swap" aria-hidden="true"><svg class="i-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><svg class="i-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M20 6L9 17l-5-5"/></svg></span>
+            <span class="long" data-email-long>mondalarup808@gmail.com</span><span class="short" data-email-short>Copy email</span>
+          </button>
+          <a class="btn btn-ghost" href="tel:+918617524338" data-magnetic>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span class="long">+91 86175 24338</span><span class="short">Call</span>
+          </a>
+        </div>
+        <div class="socials mono rise" style="--d: 640ms">
+          <a href="https://github.com/leoanimesh" target="_blank" rel="noopener me">GitHub <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          <a href="https://linkedin.com/in/leoanimesh" target="_blank" rel="noopener me">LinkedIn <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          <a href="https://calendar.app.google/EsqbZ9VxR6YqYFPp9" target="_blank" rel="noopener noreferrer">Book an intro <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+        </div>
       </div>
 
-      <ul class="hero-meta" aria-label="Quick links">
-        <li><a href="https://github.com/leoanimesh" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/leoanimesh" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="mailto:mondalarup808@gmail.com">Email</a></li>
+      <div class="pcard" data-tilt>
+        <div class="photo">
+          <picture>
+            <source srcset="assets/img/animesh-mondal.avif" type="image/avif" />
+            <source srcset="assets/img/animesh-mondal.webp" type="image/webp" />
+            <img src="assets/img/animesh-mondal.jpg" alt="Portrait of Animesh Mondal in a navy suit" width="420" height="480" fetchpriority="high" decoding="async" />
+          </picture>
+          <div class="glare" aria-hidden="true"></div>
+          <div class="ptag mono"><span class="dot dot-sm" aria-hidden="true"></span>Frontend Lead @ Zoca</div>
+        </div>
+        <dl class="facts">
+          <div class="fact"><dt class="k mono">Focus</dt><dd class="v">React Native Fabric &amp; Web</dd></div>
+          <div class="fact"><dt class="k mono">Core</dt><dd class="v">Skia, SDUI, Offline‑first</dd></div>
+          <div class="fact"><dt class="k mono">Footprint</dt><dd class="v">$3M+ ARR · 500+ orgs</dd></div>
+          <div class="fact"><dt class="k mono">Store releases</dt><dd class="v">2 shipped solo apps</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 02 METRICS -->
+    <section class="metrics-wrap" aria-label="Key metrics">
+      <ul class="metrics" id="metrics">
+        <li class="metric"><span class="n" data-count="3" data-prefix="$" data-suffix="M" data-decimals="1">$3M+</span><span class="l">ARR scaled at Zoca</span></li>
+        <li class="metric"><span class="n" data-count="100" data-suffix="%">100%</span><span class="l">Crash‑free sessions, Sentry‑tracked</span></li>
+        <li class="metric"><span class="n" data-count="500" data-suffix="+">500+</span><span class="l">Salons &amp; spas on the platform</span></li>
+        <li class="metric"><span class="n" data-count="80" data-suffix="%">80%</span><span class="l">Faster data fetching with React Query</span></li>
+        <li class="metric"><span class="n" data-count="90" data-suffix="%">90%</span><span class="l">Less deploy effort via EAS &amp; Fastlane</span></li>
+        <li class="metric"><span class="n" data-count="60" data-suffix=" fps">60 fps</span><span class="l">Skia‑rendered puzzle canvas</span></li>
       </ul>
     </section>
 
-    <!-- WORK -->
-    <section id="work" class="section reveal" aria-labelledby="work-title">
-      <header class="section-header">
-        <span class="section-index">01</span>
-        <h2 id="work-title" class="section-title">Selected Work</h2>
-        <p class="section-sub">Live products I've designed, built, and shipped end-to-end.</p>
-      </header>
+    <!-- 03 WORK -->
+    <section id="work" class="sec" data-section="work" aria-labelledby="work-h">
+      <div class="sechead" data-reveal>
+        <div>
+          <span class="eyebrow mono">03 / Selected work</span>
+          <h2 class="h2" id="work-h" data-split>Shipped systems &amp; solo products</h2>
+        </div>
+        <p class="secintro">Two apps I designed, built and released alone, the platform I lead at Zoca, and an open‑source devtool.</p>
+      </div>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card-head">
-            <img class="card-icon" src="assets/icons/zoca.png" alt="Zoca app icon" width="64" height="64" loading="lazy" decoding="async" />
-            <div class="card-head-text">
-              <h3 class="card-title">Zoca</h3>
-              <p class="card-subtitle">AI marketing for local businesses</p>
-              <span class="card-tag">Founding Engineer · Live</span>
+      <div class="work">
+
+        <div data-reveal style="--d: 0ms">
+          <article class="card" data-spot data-tilt style="--tint: 251,146,60">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · Android</span>
+              <img class="appicon" src="assets/icons/grovely.png" alt="Grovely app icon" width="96" height="96" loading="lazy" decoding="async" />
             </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>Grovely</h3><p>Puzzle your day — a daily puzzle game</p></div>
+              <ul class="chips"><li class="chip">4 games · 174 levels</li><li class="chip">Offline‑first</li><li class="chip">Daily challenges &amp; streaks</li></ul>
+              <ul class="bul">
+                <li>Cross‑platform puzzle engine — Jigsaw, Sudoku, Sliding Tile and Memory Match.</li>
+                <li>On‑device Sudoku generator with a unique‑solution guarantee.</li>
+                <li>60 fps Skia canvas; SQLite storage with InstantDB cross‑device sync and auth.</li>
+              </ul>
+              <ul class="tags mono"><li>React Native</li><li>Expo</li><li>RN Skia</li><li>InstantDB</li><li>SQLite</li><li>Jest</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://play.google.com/store/apps/details?id=com.grovely" target="_blank" rel="noopener">Google Play <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 120ms">
+          <article class="card" data-spot data-tilt style="--tint: 91,61,245">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · iPadOS · macOS</span>
+              <img class="appicon" src="assets/icons/loombox.png" alt="LoomBox app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>LoomBox</h3><p>Save anything — a private, native inbox</p></div>
+              <ul class="chips"><li class="chip">Apple ecosystem</li><li class="chip">No account, no server</li><li class="chip">Zero trackers</li></ul>
+              <ul class="bul">
+                <li>Share Extension captures links, reels, PDFs, screenshots and places from any app.</li>
+                <li>Auto‑categorised and searchable, stored on‑device, zero third‑party dependencies.</li>
+                <li>Background downloads with Live Activities, iCloud sync and a StoreKit 2 Pro plan.</li>
+              </ul>
+              <ul class="tags mono"><li>Swift</li><li>SwiftUI</li><li>SwiftData</li><li>Swift Concurrency</li><li>WidgetKit</li><li>StoreKit 2</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/loombox-save-anything/id6770147676" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://loombox.in" target="_blank" rel="noopener">loombox.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 0ms">
+          <article class="card" data-spot data-tilt style="--tint: 124,58,237">
+            <div class="media">
+              <span class="kind mono">Enterprise SaaS</span><span class="plat mono">iOS · Android · Web</span>
+              <img class="appicon" src="assets/icons/zoca.png" alt="Zoca app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>Zoca &amp; Chrone</h3><p>Operating system for salons, spas and wellness</p></div>
+              <ul class="chips"><li class="chip accent">Production core · $3M+ ARR</li><li class="chip">500+ businesses</li><li class="chip">Tap to Pay</li></ul>
+              <ul class="bul">
+                <li>Calendar booking, client &amp; service management, payments and an AI chatbot for multi‑location salons.</li>
+                <li>Tap to Pay on iPhone and Stripe Terminal through native Swift &amp; Kotlin bridges.</li>
+                <li>Proprietary server‑driven UI ships components over the air — weeks to hours.</li>
+              </ul>
+              <ul class="tags mono"><li>React Native</li><li>Next.js</li><li>Fabric</li><li>TurboModules</li><li>Stripe Terminal</li><li>TanStack Query</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/zoca-grow-your-local-business/id6738140998" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://zoca.com" target="_blank" rel="noopener">zoca.com <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 120ms">
+          <article class="card" data-spot data-tilt style="--tint: 132,204,22">
+            <div class="media">
+              <span class="kind mono">Open source</span><span class="plat mono">Chrome · Web</span>
+              <img class="appicon" src="assets/icons/repruvia.png" alt="Repruvia icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>Repruvia</h3><p>Browser bug reporter &amp; session capture</p></div>
+              <ul class="chips"><li class="chip">Chrome MV3</li><li class="chip">BYO‑key AI</li><li class="chip">Zero telemetry</li></ul>
+              <ul class="bul">
+                <li>Content‑script event capture with throttled OffscreenCanvas tab serialization.</li>
+                <li>Konva‑based canvas annotation with full undo / redo.</li>
+                <li>LLM vision drafting (OpenAI, Anthropic, Gemini, Grok) that runs client‑side only.</li>
+              </ul>
+              <ul class="tags mono"><li>TypeScript</li><li>Chrome MV3</li><li>Konva</li><li>OffscreenCanvas</li><li>LLM vision</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://github.com/repruvia/repruvia.github.io" target="_blank" rel="noopener">GitHub <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://repruvia.github.io" target="_blank" rel="noopener">Live app <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 EXPERIENCE -->
+    <section id="experience" class="sec" data-section="experience" aria-labelledby="exp-h">
+      <div class="sechead" data-reveal>
+        <div>
+          <span class="eyebrow mono">04 / Experience</span>
+          <h2 class="h2" id="exp-h" data-split>Commercial work &amp; leadership</h2>
+        </div>
+      </div>
+      <div class="xps">
+        <article class="xp xp-now" data-reveal>
+          <div class="xmeta">
+            <span class="xdate mono">Dec 2023 — Present <span class="now"><span class="dot dot-xs" aria-hidden="true"></span>Now</span></span>
+            <span class="xco">Zoca</span>
+            <span class="xloc">Bengaluru, India</span>
           </div>
-          <p class="card-desc">
-            An AI-powered platform that brings clients to salons, spas, and wellness businesses on autopilot — client discovery, lead conversion, and retention without dashboards or marketing teams. Trusted by <strong>1,000+ businesses</strong>. Foundation backed a successful <strong>$6M seed round</strong>.
-          </p>
-
-          <h4 class="card-subhead">What I shipped</h4>
-          <ul class="card-list">
-            <li>Architected the <strong>React Native mobile app</strong> and <strong>Next.js web app</strong> from scratch.</li>
-            <li>Built a <strong>server-driven UI</strong> system that ships dynamic components Over-The-Air — no App Store releases needed.</li>
-            <li>Engineered a <strong>Google Calendar–style appointment view</strong> with service selection, time-slot management, and integrated checkout.</li>
-            <li>Shipped a <strong>drag-and-drop website editor</strong> so non-technical merchants can build branded sites end-to-end.</li>
-            <li>Integrated <strong>end-to-end Stripe payments</strong> with custom Stripe Elements, plus <strong>Tap to Pay on iPhone</strong> for in-app contactless payments.</li>
-            <li>Authored internal <strong>iOS (Swift / Objective-C)</strong> and <strong>Android (Kotlin / Java)</strong> native modules for camera, payments, and platform APIs.</li>
-            <li>Led migration to React Native's <strong>New Architecture</strong> (Fabric renderer + TurboModules).</li>
-            <li>Built a CI/CD pipeline (Expo Dev Client, EAS Build, Fastlane) that cut manual deploy effort by <strong>90%</strong>.</li>
-            <li>Designed a custom design system, reducing UI development time by <strong>40%</strong>.</li>
-            <li>Maintained <strong>100% crash-free sessions</strong> in production via Sentry, error boundaries, and disciplined releases.</li>
-          </ul>
-
-          <ul class="card-meta">
-            <li>React Native</li><li>Next.js</li><li>TypeScript</li><li>Stripe</li><li>Tap to Pay</li><li>Server-Driven UI</li><li>Swift</li><li>Kotlin</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://apps.apple.com/in/app/zoca-grow-your-local-business/id6738140998" target="_blank" rel="noopener">App Store ↗</a>
-            <a href="https://play.google.com/store/apps/details?id=com.zoca.ai" target="_blank" rel="noopener">Google Play ↗</a>
-            <a href="https://app.zoca.com" target="_blank" rel="noopener">Web app ↗</a>
+          <div class="xbody">
+            <h3 class="xrole">Founding Frontend Engineer &amp; Frontend Lead</h3>
+            <ul class="bul">
+              <li>Lead the company‑wide frontend team across mobile and web — architecture, code review and roadmap.</li>
+              <li>Built Zoca's React Native app from line zero as the core product, now live on iOS and Android.</li>
+              <li>Architected a server‑driven UI system shipping components over the air; drove the migration to the New Architecture (Fabric, TurboModules).</li>
+              <li>Tap to Pay on iPhone and Stripe payments through native Swift, Objective‑C, Kotlin and Java modules.</li>
+              <li>Design system cut UI build time 40%; CI/CD with EAS, GitHub Actions and Fastlane cut deployment effort 90%.</li>
+              <li>React Query data layer 80% faster; WebSocket upload tracking cut support tickets 30%; 100% crash‑free sessions.</li>
+            </ul>
+            <ul class="chips"><li class="chips-label mono">Shipped</li><li class="chip">Zoca iOS</li><li class="chip">Zoca Android</li><li class="chip">Zoca Web</li><li class="chip">Chrone iOS</li></ul>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-head">
-            <img class="card-icon" src="assets/icons/chrone.png" alt="Chrone app icon" width="64" height="64" loading="lazy" decoding="async" />
-            <div class="card-head-text">
-              <h3 class="card-title">Chrone</h3>
-              <p class="card-subtitle">AI-led local marketing</p>
-              <span class="card-tag">Frontend Lead · Live</span>
-            </div>
+        <article class="xp" data-reveal>
+          <div class="xmeta">
+            <span class="xdate mono">Aug 2023 — Nov 2023</span>
+            <span class="xco">MPS Info Services</span>
+            <span class="xloc">Kolkata, India</span>
           </div>
-          <p class="card-desc">
-            A B2B SaaS that helps local merchants rank on Google, win more leads, and earn 5-star reviews through automated marketing. Scaled adoption to <strong>500+ businesses</strong> and <strong>$1M+ ARR</strong>.
-          </p>
+          <div class="xbody">
+            <h3 class="xrole">Software Developer</h3>
+            <ul class="bul">
+              <li>Delivered 8 mobile and web apps for tax and wedding‑management platforms (React Native, React.js).</li>
+              <li>Integrated Razorpay, PayU and PhonePe with secure checkout, webhooks and refunds.</li>
+              <li>Cut API latency 50% with caching and load times 80% with prefetching; stood up Linux production servers with Nginx, SSL and Laravel.</li>
+            </ul>
+          </div>
+        </article>
 
-          <h4 class="card-subhead">What I shipped</h4>
-          <ul class="card-list">
-            <li>Led frontend development across the mobile app and merchant dashboard.</li>
-            <li>Built end-to-end <strong>OAuth 2.0 integrations</strong> with Facebook, Instagram, and Pinterest for social authentication and content publishing.</li>
-            <li>Developed real-time upload progress tracking with <strong>WebSockets</strong>, reducing customer support tickets by <strong>30%</strong>.</li>
-            <li>Optimized data fetching with intelligent caching strategies (React Query, persisted cache), improving fetch speed by <strong>80%</strong>.</li>
-            <li>Shipped an <strong>Instagram Stories–style feature</strong> using Reanimated and Gesture Handler, boosting in-app engagement by <strong>50%</strong>.</li>
-          </ul>
-
-          <ul class="card-meta">
-            <li>React Native</li><li>OAuth 2.0</li><li>WebSocket</li><li>React Query</li><li>Reanimated</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://apps.apple.com/in/app/chrone-get-more-customers/id1610101236" target="_blank" rel="noopener">App Store ↗</a>
+        <article class="xp" data-reveal>
+          <div class="xmeta">
+            <span class="xdate mono">Jan 2023 — Jun 2023</span>
+            <span class="xco">Amazon India</span>
+            <span class="xloc">Bengaluru, India</span>
+          </div>
+          <div class="xbody">
+            <h3 class="xrole">Support Engineer Intern</h3>
+            <ul class="bul">
+              <li>Automated deployment pipelines for internal engineering tools — 10× CI efficiency, builds from 12 to under 6 minutes. Earned a full‑time return offer.</li>
+            </ul>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal" aria-labelledby="projects-title">
-      <header class="section-header">
-        <span class="section-index">02</span>
-        <h2 id="projects-title" class="section-title">Side Projects</h2>
-        <p class="section-sub">Things I make on the weekend — shipped solo, end-to-end.</p>
-      </header>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card-head">
-            <img class="card-icon" src="assets/icons/grovely.png" alt="Grovely app icon" width="64" height="64" loading="lazy" decoding="async" />
-            <div class="card-head-text">
-              <h3 class="card-title">Grovely</h3>
-              <p class="card-subtitle">Puzzle your day</p>
-              <span class="card-tag">Solo · Live on iOS</span>
-            </div>
-          </div>
-          <p class="card-desc">
-            A polished daily-play puzzle app — <strong>Jigsaw, Sudoku, Sliding Tile, and Memory Match</strong> in one experience. Built and shipped solo, end-to-end: design, native modules, backend, store listing.
-          </p>
-
-          <h4 class="card-subhead">What I built</h4>
-          <ul class="card-list">
-            <li>Designed and built <strong>four distinct puzzle engines</strong> sharing a single level system, XP, and three-star scoring.</li>
-            <li>Implemented a <strong>daily challenge</strong> with streak tracking and reset logic, plus a progressive level map.</li>
-            <li>Built an <strong>offline-first</strong> architecture with cloud backup, so progress follows the player across devices.</li>
-            <li>Crafted the full polish layer — <strong>haptics, sound, dark/light mode, custom avatars</strong>, and full-screen scene photography.</li>
-            <li>Shipped to the App Store solo, including store assets, screenshots, and review flow.</li>
-          </ul>
-
-          <ul class="card-meta">
-            <li>React Native</li><li>TypeScript</li><li>Reanimated</li><li>Cloud Sync</li><li>Offline-first</li>
-          </ul>
-          <div class="card-links">
-            <a href="https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592" target="_blank" rel="noopener">App Store ↗</a>
-          </div>
-        </article>
+    <!-- 05 STACK -->
+    <section id="stack" class="sec" data-section="stack" aria-labelledby="stack-h">
+      <div class="sechead" data-reveal>
+        <div>
+          <span class="eyebrow mono">05 / Stack</span>
+          <h2 class="h2" id="stack-h" data-split>Architecture &amp; tooling</h2>
+        </div>
       </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section reveal" aria-labelledby="exp-title">
-      <header class="section-header">
-        <span class="section-index">03</span>
-        <h2 id="exp-title" class="section-title">Experience</h2>
-        <p class="section-sub">A short timeline of the teams I've built with.</p>
-      </header>
-
-      <ol class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">Dec 2023 — Present</span>
-            <span class="timeline-loc">Bengaluru</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Founding Frontend Engineer</h3>
-            <p class="timeline-org">Zoca</p>
-            <p class="timeline-desc">
-              Architected the React Native mobile app and Next.js web app from scratch. Built server-driven UI for OTA component shipping, end-to-end Stripe and Tap to Pay payments, OAuth flows, and a drag-and-drop website editor. Led the migration to React Native's New Architecture (Fabric / TurboModules) and maintained 100% crash-free sessions in production.
-            </p>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">Aug 2023 — Nov 2023</span>
-            <span class="timeline-loc">Kolkata</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Software Developer</h3>
-            <p class="timeline-org">MPS Info Services</p>
-            <p class="timeline-desc">
-              Delivered 8 mobile and web applications for tax and wedding-management platforms. Cut backend API latency by 50% with frontend caching and optimized fetch logic. Engineered multi-role dashboards with real-time insights and role-based access.
-            </p>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">Jan 2023 — Jun 2023</span>
-            <span class="timeline-loc">Bengaluru</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Support Engineer Intern</h3>
-            <p class="timeline-org">Amazon India</p>
-            <p class="timeline-desc">
-              Automated deployment pipelines for internal tools, improving CI efficiency 10x and cutting build time from 12 minutes to under 6. Authored onboarding documentation and earned a full-time return offer.
-            </p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section reveal" aria-labelledby="skills-title">
-      <header class="section-header">
-        <span class="section-index">04</span>
-        <h2 id="skills-title" class="section-title">Skills &amp; Tooling</h2>
-        <p class="section-sub">What I reach for to ship reliable products.</p>
-      </header>
-
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3 class="skill-title">Languages &amp; Frameworks</h3>
-          <ul class="chips">
-            <li>TypeScript</li><li>JavaScript</li><li>React Native</li><li>React</li><li>Next.js</li><li>Node.js</li><li>Express</li>
-          </ul>
+      <div class="stack">
+        <div class="srow" data-reveal style="--d: 0ms">
+          <h3 class="slabel"><span class="mono">A</span>Languages &amp; runtimes</h3>
+          <ul class="sitems"><li>TypeScript</li><li>JavaScript (ESNext)</li><li>Swift</li><li>Kotlin</li><li>React Native</li><li>React.js</li><li>Next.js</li><li>Node.js</li><li>Express.js</li><li>PHP &amp; Laravel</li><li>Tailwind CSS</li></ul>
         </div>
-        <div class="skill-group">
-          <h3 class="skill-title">State &amp; Data</h3>
-          <ul class="chips">
-            <li>Redux Toolkit</li><li>React Query</li><li>Zustand</li><li>REST</li><li>GraphQL</li><li>WebSocket</li><li>MMKV</li>
-          </ul>
+        <div class="srow" data-reveal style="--d: 60ms">
+          <h3 class="slabel"><span class="mono">B</span>Mobile &amp; native bridge</h3>
+          <ul class="sitems"><li>Fabric (C++ JSI)</li><li>TurboModules</li><li>Expo &amp; EAS Build</li><li>React Native Skia</li><li>iOS / Android native modules</li><li>SwiftData</li><li>Reanimated 3</li><li>OTA updates</li></ul>
         </div>
-        <div class="skill-group">
-          <h3 class="skill-title">Mobile &amp; Native</h3>
-          <ul class="chips">
-            <li>Fabric / TurboModules</li><li>Expo / EAS</li><li>Swift</li><li>Kotlin</li><li>Tap to Pay</li><li>OTA Updates</li><li>Push Notifications</li><li>Deep Linking</li>
-          </ul>
+        <div class="srow" data-reveal style="--d: 120ms">
+          <h3 class="slabel"><span class="mono">C</span>Data, state &amp; sync</h3>
+          <ul class="sitems"><li>TanStack Query</li><li>InstantDB</li><li>MMKV &amp; SQLite</li><li>Redux Toolkit</li><li>Zustand</li><li>GraphQL &amp; REST</li><li>WebSockets</li><li>Firebase &amp; Supabase</li></ul>
         </div>
-        <div class="skill-group">
-          <h3 class="skill-title">Backend &amp; Cloud</h3>
-          <ul class="chips">
-            <li>Firebase</li><li>Supabase</li><li>OAuth 2.0</li><li>Stripe API</li><li>SQL</li><li>Server-Driven UI</li>
-          </ul>
+        <div class="srow" data-reveal style="--d: 180ms">
+          <h3 class="slabel"><span class="mono">D</span>Payments &amp; hardware</h3>
+          <ul class="sitems"><li>Tap to Pay on iPhone</li><li>Stripe Terminal SDK</li><li>StoreKit 2</li><li>Razorpay</li><li>PhonePe</li><li>PayU</li></ul>
         </div>
-        <div class="skill-group">
-          <h3 class="skill-title">Testing &amp; Quality</h3>
-          <ul class="chips">
-            <li>Jest</li><li>React Testing Library</li><li>Detox</li><li>Sentry</li><li>a11y</li><li>i18n</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-title">DevOps &amp; Tools</h3>
-          <ul class="chips">
-            <li>Git</li><li>GitHub Actions</li><li>CI/CD</li><li>Fastlane</li><li>Webpack</li><li>Vite</li><li>Figma</li><li>Linux</li>
-          </ul>
+        <div class="srow" data-reveal style="--d: 240ms">
+          <h3 class="slabel"><span class="mono">E</span>DevOps, testing &amp; quality</h3>
+          <ul class="sitems"><li>Fastlane</li><li>GitHub Actions</li><li>Jest</li><li>React Testing Library</li><li>Detox E2E</li><li>Sentry</li><li>Xcode &amp; LLDB</li><li>Linux &amp; Nginx</li><li>WCAG a11y</li><li>i18n</li></ul>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section section-contact reveal" aria-labelledby="contact-title">
-      <header class="section-header">
-        <span class="section-index">05</span>
-        <h2 id="contact-title" class="section-title">Let's build something.</h2>
-        <p class="section-sub">Open to roles and interesting collaborations.</p>
-      </header>
+    <!-- 06 EDUCATION -->
+    <section class="sec sec-edu" aria-labelledby="edu-h">
+      <div class="edu" data-reveal>
+        <span class="eyebrow mono">06 / Education</span>
+        <div class="edu-main">
+          <h2 id="edu-h" data-split>B.Tech, Information Technology</h2>
+          <span class="edu-sub">JIS College of Engineering · 2019 — 2023</span>
+        </div>
+        <div class="gpa">
+          <b><span class="gpa-n" data-count="8.63" data-decimals="2">8.63</span><span> / 10</span></b>
+          <span class="gpa-note">First Class with Distinction</span>
+        </div>
+      </div>
+    </section>
 
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:mondalarup808@gmail.com">mondalarup808@gmail.com</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/leoanimesh" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn btn-ghost" href="https://github.com/leoanimesh" target="_blank" rel="noopener">GitHub ↗</a>
+    <!-- 07 CONTACT -->
+    <section id="contact" class="sec" data-section="contact" aria-labelledby="contact-h">
+      <div class="cta" data-reveal data-spot>
+        <div class="cta-grid" aria-hidden="true"></div>
+        <div class="cta-spot" aria-hidden="true"></div>
+        <div class="cta-copy">
+          <span class="eyebrow mono">07 / Contact</span>
+          <h2 id="contact-h" data-split>Building something from line zero?</h2>
+          <p>I'm open to founding and senior frontend / mobile roles and architecture contracts — Bengaluru or remote.</p>
+        </div>
+        <div class="clist">
+          <button class="btn btn-primary" type="button" data-copy-email data-magnetic aria-label="Copy email address mondalarup808@gmail.com">
+            <span data-email-long>mondalarup808@gmail.com</span>
+            <span class="swap" aria-hidden="true"><svg class="i-copy" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><svg class="i-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M20 6L9 17l-5-5"/></svg></span>
+          </button>
+          <a class="btn btn-secondary" href="https://calendar.app.google/EsqbZ9VxR6YqYFPp9" target="_blank" rel="noopener noreferrer" data-magnetic>Book a 20‑min intro <svg class="i-ne" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          <div class="row2">
+            <a class="btn btn-ghost bordered" href="https://github.com/leoanimesh" target="_blank" rel="noopener me">GitHub <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+            <a class="btn btn-ghost bordered" href="https://linkedin.com/in/leoanimesh" target="_blank" rel="noopener me">LinkedIn <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Animesh Mondal · Built with HTML, CSS, and care.</p>
+  <footer class="foot">
+    <span>© <span id="year">2026</span> Animesh Mondal · Bengaluru, India</span>
+    <span class="mono">No trackers. No cookies. Just the work.</span>
+    <a class="totop" href="#top">Back to top <span class="up" aria-hidden="true">↑</span></a>
   </footer>
+</div>
 
-  <script src="script.js" defer></script>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M20 6L9 17l-5-5"/></svg>
+  <span>Email copied to clipboard</span>
+</div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
