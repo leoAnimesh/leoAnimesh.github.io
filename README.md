@@ -9,7 +9,7 @@ portfolio/
 ├── script.js                # Theme toggle, parallax, micro-interactions
 ├── assets/
 │   ├── img/animesh-mondal.{avif,webp,jpg}  # Hero portrait (AVIF/WebP with JPG fallback)
-│   ├── icons/*.png                   # Project app icons (Grovely, LoomBox, Zoca, Repruvia)
+│   ├── icons/*.png                   # Project app icons (Grovely, LoomBox, Formatter, Whislink, Zoca, Repruvia)
 │   └── Animesh-Mondal-Resume.pdf     # Résumé linked from the nav
 ├── 404.html                 # Branded not-found page (GitHub Pages serves it automatically)
 ├── favicon.svg / favicon.ico        # "AM" monogram (SVG + 16/32/48 ICO)

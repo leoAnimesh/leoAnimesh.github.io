@@ -422,7 +422,6 @@ main { display: block; }
 .gpa { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 .gpa b { font-size: 34px; font-weight: 600; letter-spacing: -0.03em; }
 .gpa b span { font-size: 16px; color: var(--subtle); font-weight: 500; }
-.gpa-note { font-size: 13px; color: var(--muted); }
 
 /* ---------- contact ---------- */
 .cta {
@@ -538,6 +537,7 @@ main { display: block; }
   .cbody { padding: 22px; }
   .ctas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ctas .btn { justify-content: center; padding: 0 10px; }
+  .ctas .btn:only-child { grid-column: 1 / -1; }
   .appicon { width: 84px; height: 84px; border-radius: 20px; }
 }
 @media (max-width: 480px) {
