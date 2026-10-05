@@ -9,7 +9,7 @@
   <title>Animesh Mondal — Frontend &amp; Mobile Architect | React Native</title>
   <meta name="description" content="Frontend &amp; Mobile Architect in Bengaluru building React Native, Server-Driven UI and native systems. Frontend Lead at Zoca ($3M+ ARR, 500+ businesses)." />
   <meta name="author" content="Animesh Mondal" />
-  <meta name="keywords" content="Animesh Mondal, frontend architect, mobile architect, React Native developer, server-driven UI, React engineer, Swift, SwiftUI, Next.js developer, TypeScript, Bengaluru, Zoca, Grovely, LoomBox, Formatter, Whislink, Repruvia, portfolio" />
+  <meta name="keywords" content="Animesh Mondal, frontend architect, mobile architect, React Native developer, server-driven UI, React engineer, Swift, SwiftUI, Next.js developer, TypeScript, Bengaluru, Zoca, Grovely, LoomBox, Ecreelo, Formatter, Whislink, DevArcade, Repruvia, portfolio" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="format-detection" content="telephone=no" />
@@ -184,14 +184,14 @@
         "mainEntity": { "@id": "https://leoanimesh.github.io/#person" },
         "primaryImageOfPage": { "@id": "https://leoanimesh.github.io/#ogimage" },
         "hasPart": { "@id": "https://leoanimesh.github.io/#work" },
-        "dateModified": "2026-09-27",
+        "dateModified": "2026-10-05",
         "inLanguage": "en"
       },
       {
         "@type": "ItemList",
         "@id": "https://leoanimesh.github.io/#work",
         "name": "Selected work",
-        "numberOfItems": 6,
+        "numberOfItems": 8,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -259,6 +259,37 @@
             "@type": "ListItem",
             "position": 5,
             "item": {
+              "@type": "MobileApplication",
+              "name": "Ecreelo",
+              "alternateName": "Ecreelo: Scroll & Shop",
+              "description": "An offline-first shopping reel: scroll product cards one screen at a time, file the ones worth buying into collections, and keep the store link, price and shop attached.",
+              "applicationCategory": "ShoppingApplication",
+              "operatingSystem": "iOS, Android",
+              "url": "https://apps.apple.com/in/app/ecreelo-scroll-shop/id6809688764",
+              "sameAs": ["https://play.google.com/store/apps/details?id=com.ecreelo"],
+              "image": "https://leoanimesh.github.io/assets/icons/ecreelo.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "WebApplication",
+              "name": "DevArcade",
+              "description": "An offline-first, gamified web app of interactive coding courses in DSA, JavaScript, TypeScript, HTML, CSS, React and Frontend System Design, with XP, streaks and sandboxed code grading.",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Any",
+              "browserRequirements": "Requires a modern web browser.",
+              "url": "https://devarcade.in",
+              "image": "https://leoanimesh.github.io/assets/icons/devarcade.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
               "@type": "SoftwareApplication",
               "name": "Zoca",
               "description": "Operating system for salons, spas and wellness businesses: calendar booking, client and service management, payments with Tap to Pay, and an AI chatbot.",
@@ -273,7 +304,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 6,
+            "position": 8,
             "item": {
               "@type": "SoftwareApplication",
               "name": "Repruvia",
@@ -400,7 +431,7 @@
           <span class="eyebrow mono">03 / Selected work</span>
           <h2 class="h2" id="work-h" data-split>Shipped systems &amp; solo products</h2>
         </div>
-        <p class="secintro">Two store apps and two web products I designed, built and shipped alone, the platform I lead at Zoca, and an open‑source devtool.</p>
+        <p class="secintro">Three store apps and three web products I designed, built and shipped alone, the platform I lead at Zoca, and an open‑source devtool.</p>
       </div>
 
       <div class="work">
@@ -490,6 +521,51 @@
               <ul class="tags mono"><li>React 19</li><li>TypeScript</li><li>WebRTC</li><li>Supabase</li><li>TanStack Router</li><li>Zustand</li></ul>
               <div class="ctas">
                 <a class="btn btn-primary btn-sm" href="https://whislink.com" target="_blank" rel="noopener">whislink.com <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 0ms">
+          <article class="card" data-spot data-tilt style="--tint: 59,91,255">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · Android</span>
+              <img class="appicon" src="assets/icons/ecreelo.png" alt="Ecreelo app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>Ecreelo</h3><p>Scroll &amp; Shop — a shopping reel</p></div>
+              <ul class="chips"><li class="chip">Offline‑first</li><li class="chip">Phone &amp; tablet layouts</li><li class="chip">Store link kept on every save</li></ul>
+              <ul class="bul">
+                <li>Product cards scroll one screen at a time; the ones worth buying are filed into collections.</li>
+                <li>Reads answer from SQLite and writes queue in an outbox, replayed in order when a connection returns.</li>
+                <li>Keyset‑paged reel over a fixed shuffle line, so every session sees the whole catalog without repeats.</li>
+              </ul>
+              <ul class="tags mono"><li>Flutter</li><li>Riverpod</li><li>go_router</li><li>Supabase</li><li>SQLite</li><li>Freezed</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/in/app/ecreelo-scroll-shop/id6809688764" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://play.google.com/store/apps/details?id=com.ecreelo" target="_blank" rel="noopener">Google Play <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 120ms">
+          <article class="card" data-spot data-tilt style="--tint: 59,130,246">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">Web · PWA · Offline</span>
+              <img class="appicon" src="assets/icons/devarcade.png" alt="DevArcade app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>DevArcade</h3><p>Gamified interactive coding courses</p></div>
+              <ul class="chips"><li class="chip">7 courses</li><li class="chip">XP, streaks &amp; badges</li><li class="chip">Works offline</li></ul>
+              <ul class="bul">
+                <li>DSA, JavaScript, TypeScript, HTML, CSS, React and Frontend System Design, with quizzes and runnable examples.</li>
+                <li>Code graded in a sandbox: the real TypeScript checker, a rendered page and React interaction tests.</li>
+                <li>Google sign‑in with Firestore sync, Razorpay Pro plan, and Cloudflare Pages Functions for billing.</li>
+              </ul>
+              <ul class="tags mono"><li>Svelte 5</li><li>Vite</li><li>TypeScript</li><li>Firebase</li><li>Cloudflare Pages</li><li>CodeMirror</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://devarcade.in" target="_blank" rel="noopener">devarcade.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
               </div>
             </div>
           </article>

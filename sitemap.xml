@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://leoanimesh.github.io/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -23,6 +23,12 @@
     </image:image>
     <image:image>
       <image:loc>https://leoanimesh.github.io/assets/icons/whislink.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leoanimesh.github.io/assets/icons/ecreelo.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leoanimesh.github.io/assets/icons/devarcade.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://leoanimesh.github.io/assets/icons/zoca.png</image:loc>
