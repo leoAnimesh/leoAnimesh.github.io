@@ -120,7 +120,15 @@
   const progress = doc.getElementById('progress');
   const nav = doc.querySelector('.nav');
   let raf = 0;
+  let scrollTimer = 0;
   const onScroll = () => {
+    // Suspend card hover/tilt while scrolling, so cards sliding under a still
+    // cursor don't repaint their gradients mid-scroll.
+    if (finePointer) {
+      if (!scrollTimer) root.classList.add('is-scrolling');
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => { scrollTimer = 0; root.classList.remove('is-scrolling'); }, 150);
+    }
     if (raf) return;
     raf = requestAnimationFrame(() => {
       raf = 0;
@@ -201,6 +209,10 @@
     // clear the active state when back in the hero
     const hero = doc.getElementById('top');
     if (hero) {
+      // pause the hero's looping grid drift while it's off-screen
+      new IntersectionObserver((entries) => {
+        hero.classList.toggle('off', !entries[0].isIntersecting);
+      }).observe(hero);
       new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           navLinks.forEach((a) => { a.classList.remove('active'); a.removeAttribute('aria-current'); });

@@ -157,9 +157,9 @@ main { display: block; }
   height: var(--nav-h);
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 0 var(--gx);
-  background: rgba(var(--bg-rgb), 0.74);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  backdrop-filter: blur(14px) saturate(140%);
+  background: rgba(var(--bg-rgb), 0.86);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(var(--fg-rgb), 0.08);
 }
 .progress {
@@ -249,6 +249,7 @@ main { display: block; }
   animation: drift 30s linear infinite; pointer-events: none;
 }
 @keyframes drift { to { transform: translate(64px, 64px); } }
+.hero.off .hero-grid { animation-play-state: paused; }
 .hero-spot {
   position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(520px circle at var(--mx, 28%) var(--my, 30%), rgba(var(--accent-rgb), 0.08), transparent 60%);
@@ -340,9 +341,9 @@ main { display: block; }
   position: relative; height: 100%; display: flex; flex-direction: column;
   background: var(--surface); border: 1px solid rgba(var(--fg-rgb), 0.08);
   border-radius: 24px; overflow: hidden;
-  transform: perspective(1000px) translateY(var(--lift, 0px)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   transition: transform .6s var(--ease-out), border-color .3s;
 }
+.card:hover, .card.is-tilting { transform: perspective(1000px) translateY(var(--lift, 0px)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); }
 .card:hover { --lift: -4px; border-color: rgba(var(--fg-rgb), 0.18); }
 .card::after {
   content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
@@ -750,6 +751,7 @@ main { display: block; }
   .tags li:hover { background: rgba(var(--fg-rgb), 0.09); color: var(--text-2); }
 }
 @media (hover: none) { .card:hover { --lift: 0px; } }
+.is-scrolling .card, .is-scrolling .pcard { pointer-events: none; }
 
 /* ---------- experience timeline ---------- */
 .xp { position: relative; }
