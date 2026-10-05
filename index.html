@@ -197,15 +197,14 @@
             "@type": "ListItem",
             "position": 1,
             "item": {
-              "@type": "SoftwareApplication",
-              "name": "Grovely",
-              "alternateName": "Grovely: Puzzle your day",
-              "description": "A daily puzzle game with Jigsaw, Sudoku, Sliding Tile and Memory Match: 4 games, 174 levels, offline-first, with daily challenges and streaks.",
-              "applicationCategory": "GameApplication",
-              "operatingSystem": "iOS, Android",
-              "url": "https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592",
-              "sameAs": ["https://play.google.com/store/apps/details?id=com.grovely"],
-              "image": "https://leoanimesh.github.io/assets/icons/grovely.png",
+              "@type": "WebApplication",
+              "name": "DevArcade",
+              "description": "An offline-first, gamified web app of interactive coding courses in DSA, JavaScript, TypeScript, HTML, CSS, React and Frontend System Design, with XP, streaks and sandboxed code grading.",
+              "applicationCategory": "EducationalApplication",
+              "operatingSystem": "Any",
+              "browserRequirements": "Requires a modern web browser.",
+              "url": "https://devarcade.in",
+              "image": "https://leoanimesh.github.io/assets/icons/devarcade.png",
               "author": { "@id": "https://leoanimesh.github.io/#person" }
             }
           },
@@ -213,15 +212,14 @@
             "@type": "ListItem",
             "position": 2,
             "item": {
-              "@type": "SoftwareApplication",
-              "name": "LoomBox",
-              "alternateName": "LoomBox: Save anything",
-              "description": "A private, native inbox for links, reels, PDFs, screenshots and places. Stored on-device with no account, no server and zero trackers.",
-              "applicationCategory": "UtilitiesApplication",
-              "operatingSystem": "iOS, iPadOS, macOS",
-              "url": "https://loombox.in",
-              "installUrl": "https://apps.apple.com/us/app/loombox-save-anything/id6770147676",
-              "image": "https://leoanimesh.github.io/assets/icons/loombox.png",
+              "@type": "WebApplication",
+              "name": "Whislink",
+              "description": "Anonymous one-to-one voice calls with strangers in the browser, over peer-to-peer WebRTC audio. No photos, no feeds, no swiping.",
+              "applicationCategory": "CommunicationApplication",
+              "operatingSystem": "Any",
+              "browserRequirements": "Requires a modern web browser with microphone access.",
+              "url": "https://whislink.com",
+              "image": "https://leoanimesh.github.io/assets/icons/whislink.png",
               "author": { "@id": "https://leoanimesh.github.io/#person" }
             }
           },
@@ -244,20 +242,37 @@
             "@type": "ListItem",
             "position": 4,
             "item": {
-              "@type": "WebApplication",
-              "name": "Whislink",
-              "description": "Anonymous one-to-one voice calls with strangers in the browser, over peer-to-peer WebRTC audio. No photos, no feeds, no swiping.",
-              "applicationCategory": "CommunicationApplication",
-              "operatingSystem": "Any",
-              "browserRequirements": "Requires a modern web browser with microphone access.",
-              "url": "https://whislink.com",
-              "image": "https://leoanimesh.github.io/assets/icons/whislink.png",
+              "@type": "SoftwareApplication",
+              "name": "Grovely",
+              "alternateName": "Grovely: Puzzle your day",
+              "description": "A daily puzzle game with Jigsaw, Sudoku, Sliding Tile and Memory Match: 4 games, 174 levels, offline-first, with daily challenges and streaks.",
+              "applicationCategory": "GameApplication",
+              "operatingSystem": "iOS, Android",
+              "url": "https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592",
+              "sameAs": ["https://play.google.com/store/apps/details?id=com.grovely"],
+              "image": "https://leoanimesh.github.io/assets/icons/grovely.png",
               "author": { "@id": "https://leoanimesh.github.io/#person" }
             }
           },
           {
             "@type": "ListItem",
             "position": 5,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "LoomBox",
+              "alternateName": "LoomBox: Save anything",
+              "description": "A private, native inbox for links, reels, PDFs, screenshots and places. Stored on-device with no account, no server and zero trackers.",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "iOS, iPadOS, macOS",
+              "url": "https://loombox.in",
+              "installUrl": "https://apps.apple.com/us/app/loombox-save-anything/id6770147676",
+              "image": "https://leoanimesh.github.io/assets/icons/loombox.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
             "item": {
               "@type": "MobileApplication",
               "name": "Ecreelo",
@@ -268,21 +283,6 @@
               "url": "https://apps.apple.com/in/app/ecreelo-scroll-shop/id6809688764",
               "sameAs": ["https://play.google.com/store/apps/details?id=com.ecreelo"],
               "image": "https://leoanimesh.github.io/assets/icons/ecreelo.png",
-              "author": { "@id": "https://leoanimesh.github.io/#person" }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "item": {
-              "@type": "WebApplication",
-              "name": "DevArcade",
-              "description": "An offline-first, gamified web app of interactive coding courses in DSA, JavaScript, TypeScript, HTML, CSS, React and Frontend System Design, with XP, streaks and sandboxed code grading.",
-              "applicationCategory": "EducationalApplication",
-              "operatingSystem": "Any",
-              "browserRequirements": "Requires a modern web browser.",
-              "url": "https://devarcade.in",
-              "image": "https://leoanimesh.github.io/assets/icons/devarcade.png",
               "author": { "@id": "https://leoanimesh.github.io/#person" }
             }
           },
@@ -431,74 +431,28 @@
           <span class="eyebrow mono">03 / Selected work</span>
           <h2 class="h2" id="work-h" data-split>Shipped systems &amp; solo products</h2>
         </div>
-        <p class="secintro">Three store apps and three web products I designed, built and shipped alone, the platform I lead at Zoca, and an open‑source devtool.</p>
+        <p class="secintro">Three web products and three store apps I designed, built and shipped alone, the platform I lead at Zoca, and an open‑source devtool.</p>
       </div>
 
       <div class="work">
 
         <div data-reveal style="--d: 0ms">
-          <article class="card" data-spot data-tilt style="--tint: 251,146,60">
+          <article class="card" data-spot data-tilt style="--tint: 59,130,246">
             <div class="media">
-              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · Android</span>
-              <img class="appicon" src="assets/icons/grovely.png" alt="Grovely app icon" width="96" height="96" loading="lazy" decoding="async" />
+              <span class="kind mono">Solo indie</span><span class="plat mono">Web · PWA · Offline</span>
+              <img class="appicon" src="assets/icons/devarcade.png" alt="DevArcade app icon" width="96" height="96" loading="lazy" decoding="async" />
             </div>
             <div class="cbody">
-              <div class="ctitle"><h3>Grovely</h3><p>Puzzle your day — a daily puzzle game</p></div>
-              <ul class="chips"><li class="chip">4 games · 174 levels</li><li class="chip">Offline‑first</li><li class="chip">Daily challenges &amp; streaks</li></ul>
+              <div class="ctitle"><h3>DevArcade</h3><p>Gamified interactive coding courses</p></div>
+              <ul class="chips"><li class="chip">7 courses</li><li class="chip">XP, streaks &amp; badges</li><li class="chip">Works offline</li></ul>
               <ul class="bul">
-                <li>Cross‑platform puzzle engine — Jigsaw, Sudoku, Sliding Tile and Memory Match.</li>
-                <li>On‑device Sudoku generator with a unique‑solution guarantee.</li>
-                <li>60 fps Skia canvas; SQLite storage with InstantDB cross‑device sync and auth.</li>
+                <li>DSA, JavaScript, TypeScript, HTML, CSS, React and Frontend System Design, with quizzes and runnable examples.</li>
+                <li>Code graded in a sandbox: the real TypeScript checker, a rendered page and React interaction tests.</li>
+                <li>Google sign‑in with Firestore sync, Razorpay Pro plan, and Cloudflare Pages Functions for billing.</li>
               </ul>
-              <ul class="tags mono"><li>React Native</li><li>Expo</li><li>RN Skia</li><li>InstantDB</li><li>SQLite</li><li>Jest</li></ul>
+              <ul class="tags mono"><li>Svelte 5</li><li>Vite</li><li>TypeScript</li><li>Firebase</li><li>Cloudflare Pages</li><li>CodeMirror</li></ul>
               <div class="ctas">
-                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
-                <a class="btn btn-secondary btn-sm" href="https://play.google.com/store/apps/details?id=com.grovely" target="_blank" rel="noopener">Google Play <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div data-reveal style="--d: 120ms">
-          <article class="card" data-spot data-tilt style="--tint: 91,61,245">
-            <div class="media">
-              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · iPadOS · macOS</span>
-              <img class="appicon" src="assets/icons/loombox.png" alt="LoomBox app icon" width="96" height="96" loading="lazy" decoding="async" />
-            </div>
-            <div class="cbody">
-              <div class="ctitle"><h3>LoomBox</h3><p>Save anything — a private, native inbox</p></div>
-              <ul class="chips"><li class="chip">Apple ecosystem</li><li class="chip">No account, no server</li><li class="chip">Zero trackers</li></ul>
-              <ul class="bul">
-                <li>Share Extension captures links, reels, PDFs, screenshots and places from any app.</li>
-                <li>Auto‑categorised and searchable, stored on‑device, zero third‑party dependencies.</li>
-                <li>Background downloads with Live Activities, iCloud sync and a StoreKit 2 Pro plan.</li>
-              </ul>
-              <ul class="tags mono"><li>Swift</li><li>SwiftUI</li><li>SwiftData</li><li>Swift Concurrency</li><li>WidgetKit</li><li>StoreKit 2</li></ul>
-              <div class="ctas">
-                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/loombox-save-anything/id6770147676" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
-                <a class="btn btn-secondary btn-sm" href="https://loombox.in" target="_blank" rel="noopener">loombox.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div data-reveal style="--d: 0ms">
-          <article class="card" data-spot data-tilt style="--tint: 79,209,193">
-            <div class="media">
-              <span class="kind mono">Solo indie</span><span class="plat mono">Web · Offline</span>
-              <img class="appicon" src="assets/icons/formatter.png" alt="Formatter app icon" width="96" height="96" loading="lazy" decoding="async" />
-            </div>
-            <div class="cbody">
-              <div class="ctitle"><h3>Formatter</h3><p>Free developer tools that run in your browser</p></div>
-              <ul class="chips"><li class="chip">7 languages</li><li class="chip">Nothing uploaded</li><li class="chip">Works offline</li></ul>
-              <ul class="bul">
-                <li>Formats JSON, YAML, XML, HTML, CSS, JavaScript and TypeScript with lazy‑loaded WebAssembly formatters.</li>
-                <li>Myers diff checker with word‑level highlights; on‑device image compressor and resizer.</li>
-                <li>Drag‑and‑drop HTML email builder; every tool route prerendered with its own SEO metadata.</li>
-              </ul>
-              <ul class="tags mono"><li>React 19</li><li>TypeScript</li><li>Redux Toolkit</li><li>WebAssembly</li><li>Tailwind CSS</li><li>Vite</li></ul>
-              <div class="ctas">
-                <a class="btn btn-primary btn-sm" href="https://formatter.in" target="_blank" rel="noopener">formatter.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-primary btn-sm" href="https://devarcade.in" target="_blank" rel="noopener">devarcade.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
               </div>
             </div>
           </article>
@@ -527,6 +481,74 @@
         </div>
 
         <div data-reveal style="--d: 0ms">
+          <article class="card" data-spot data-tilt style="--tint: 79,209,193">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">Web · Offline</span>
+              <img class="appicon" src="assets/icons/formatter.png" alt="Formatter app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>Formatter</h3><p>Free developer tools that run in your browser</p></div>
+              <ul class="chips"><li class="chip">7 languages</li><li class="chip">Nothing uploaded</li><li class="chip">Works offline</li></ul>
+              <ul class="bul">
+                <li>Formats JSON, YAML, XML, HTML, CSS, JavaScript and TypeScript with lazy‑loaded WebAssembly formatters.</li>
+                <li>Myers diff checker with word‑level highlights; on‑device image compressor and resizer.</li>
+                <li>Drag‑and‑drop HTML email builder; every tool route prerendered with its own SEO metadata.</li>
+              </ul>
+              <ul class="tags mono"><li>React 19</li><li>TypeScript</li><li>Redux Toolkit</li><li>WebAssembly</li><li>Tailwind CSS</li><li>Vite</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://formatter.in" target="_blank" rel="noopener">formatter.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 120ms">
+          <article class="card" data-spot data-tilt style="--tint: 251,146,60">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · Android</span>
+              <img class="appicon" src="assets/icons/grovely.png" alt="Grovely app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>Grovely</h3><p>Puzzle your day — a daily puzzle game</p></div>
+              <ul class="chips"><li class="chip">4 games · 174 levels</li><li class="chip">Offline‑first</li><li class="chip">Daily challenges &amp; streaks</li></ul>
+              <ul class="bul">
+                <li>Cross‑platform puzzle engine — Jigsaw, Sudoku, Sliding Tile and Memory Match.</li>
+                <li>On‑device Sudoku generator with a unique‑solution guarantee.</li>
+                <li>60 fps Skia canvas; SQLite storage with InstantDB cross‑device sync and auth.</li>
+              </ul>
+              <ul class="tags mono"><li>React Native</li><li>Expo</li><li>RN Skia</li><li>InstantDB</li><li>SQLite</li><li>Jest</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/grovely-puzzle-your-day/id6768094592" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://play.google.com/store/apps/details?id=com.grovely" target="_blank" rel="noopener">Google Play <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 0ms">
+          <article class="card" data-spot data-tilt style="--tint: 91,61,245">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · iPadOS · macOS</span>
+              <img class="appicon" src="assets/icons/loombox.png" alt="LoomBox app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>LoomBox</h3><p>Save anything — a private, native inbox</p></div>
+              <ul class="chips"><li class="chip">Apple ecosystem</li><li class="chip">No account, no server</li><li class="chip">Zero trackers</li></ul>
+              <ul class="bul">
+                <li>Share Extension captures links, reels, PDFs, screenshots and places from any app.</li>
+                <li>Auto‑categorised and searchable, stored on‑device, zero third‑party dependencies.</li>
+                <li>Background downloads with Live Activities, iCloud sync and a StoreKit 2 Pro plan.</li>
+              </ul>
+              <ul class="tags mono"><li>Swift</li><li>SwiftUI</li><li>SwiftData</li><li>Swift Concurrency</li><li>WidgetKit</li><li>StoreKit 2</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/loombox-save-anything/id6770147676" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://loombox.in" target="_blank" rel="noopener">loombox.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 120ms">
           <article class="card" data-spot data-tilt style="--tint: 59,91,255">
             <div class="media">
               <span class="kind mono">Solo indie</span><span class="plat mono">iOS · Android</span>
@@ -544,28 +566,6 @@
               <div class="ctas">
                 <a class="btn btn-primary btn-sm" href="https://apps.apple.com/in/app/ecreelo-scroll-shop/id6809688764" target="_blank" rel="noopener">App Store <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
                 <a class="btn btn-secondary btn-sm" href="https://play.google.com/store/apps/details?id=com.ecreelo" target="_blank" rel="noopener">Google Play <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div data-reveal style="--d: 120ms">
-          <article class="card" data-spot data-tilt style="--tint: 59,130,246">
-            <div class="media">
-              <span class="kind mono">Solo indie</span><span class="plat mono">Web · PWA · Offline</span>
-              <img class="appicon" src="assets/icons/devarcade.png" alt="DevArcade app icon" width="96" height="96" loading="lazy" decoding="async" />
-            </div>
-            <div class="cbody">
-              <div class="ctitle"><h3>DevArcade</h3><p>Gamified interactive coding courses</p></div>
-              <ul class="chips"><li class="chip">7 courses</li><li class="chip">XP, streaks &amp; badges</li><li class="chip">Works offline</li></ul>
-              <ul class="bul">
-                <li>DSA, JavaScript, TypeScript, HTML, CSS, React and Frontend System Design, with quizzes and runnable examples.</li>
-                <li>Code graded in a sandbox: the real TypeScript checker, a rendered page and React interaction tests.</li>
-                <li>Google sign‑in with Firestore sync, Razorpay Pro plan, and Cloudflare Pages Functions for billing.</li>
-              </ul>
-              <ul class="tags mono"><li>Svelte 5</li><li>Vite</li><li>TypeScript</li><li>Firebase</li><li>Cloudflare Pages</li><li>CodeMirror</li></ul>
-              <div class="ctas">
-                <a class="btn btn-primary btn-sm" href="https://devarcade.in" target="_blank" rel="noopener">devarcade.in <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
               </div>
             </div>
           </article>
