@@ -227,6 +227,7 @@ main { display: block; }
 .btn-ghost { color: var(--muted); background: transparent; }
 .btn-ghost:hover { color: var(--text); background: rgba(var(--fg-rgb), 0.04); }
 .btn-ghost.bordered { border-color: rgba(var(--fg-rgb), 0.1); }
+.btn.soon { cursor: default; pointer-events: none; }
 .btn-sm { height: 44px; padding: 0 16px; font-size: 14px; border-radius: 10px; }
 .btn .short { display: none; }
 

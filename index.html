@@ -9,7 +9,7 @@
   <title>Animesh Mondal — Frontend &amp; Mobile Architect | React Native</title>
   <meta name="description" content="Frontend &amp; Mobile Architect in Bengaluru building React Native, Server-Driven UI and native systems. Frontend Lead at Zoca ($3M+ ARR, 500+ businesses)." />
   <meta name="author" content="Animesh Mondal" />
-  <meta name="keywords" content="Animesh Mondal, frontend architect, mobile architect, React Native developer, server-driven UI, React engineer, Swift, SwiftUI, Next.js developer, TypeScript, Bengaluru, Zoca, Grovely, LoomBox, Ecreelo, Formatter, Whislink, DevArcade, Repruvia, portfolio" />
+  <meta name="keywords" content="Animesh Mondal, frontend architect, mobile architect, React Native developer, server-driven UI, React engineer, Swift, SwiftUI, Next.js developer, TypeScript, Bengaluru, Zoca, Grovely, LoomBox, Ecreelo, Astropedia, Formatter, Whislink, DevArcade, Repruvia, OpenClean, portfolio" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="format-detection" content="telephone=no" />
@@ -184,14 +184,14 @@
         "mainEntity": { "@id": "https://leoanimesh.github.io/#person" },
         "primaryImageOfPage": { "@id": "https://leoanimesh.github.io/#ogimage" },
         "hasPart": { "@id": "https://leoanimesh.github.io/#work" },
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-14",
         "inLanguage": "en"
       },
       {
         "@type": "ItemList",
         "@id": "https://leoanimesh.github.io/#work",
         "name": "Selected work",
-        "numberOfItems": 8,
+        "numberOfItems": 10,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -290,6 +290,21 @@
             "@type": "ListItem",
             "position": 7,
             "item": {
+              "@type": "MobileApplication",
+              "name": "Astropedia",
+              "alternateName": "Astropedia: Vedic Astrology",
+              "description": "Private Vedic astrology app: kundli, dasha, panchang and kundli matching, with Saga, a fine-tuned Gemma model that answers questions about your chart entirely on the phone. English, Hindi and Bengali.",
+              "applicationCategory": "LifestyleApplication",
+              "operatingSystem": "iOS, Android",
+              "url": "https://github.com/leoAnimesh/astropedia",
+              "image": "https://leoanimesh.github.io/assets/icons/astropedia.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
               "@type": "SoftwareApplication",
               "name": "Zoca",
               "description": "Operating system for salons, spas and wellness businesses: calendar booking, client and service management, payments with Tap to Pay, and an AI chatbot.",
@@ -304,7 +319,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 8,
+            "position": 9,
             "item": {
               "@type": "SoftwareApplication",
               "name": "Repruvia",
@@ -314,6 +329,23 @@
               "url": "https://repruvia.github.io",
               "sameAs": ["https://github.com/repruvia/repruvia.github.io"],
               "image": "https://leoanimesh.github.io/assets/icons/repruvia.png",
+              "author": { "@id": "https://leoanimesh.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "OpenClean",
+              "description": "Free, open-source Mac cleaner and CLI: Smart Scan, Uninstaller, Space Lens and a menu bar monitor, with readable YAML rules and a quarantine you can restore from.",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "macOS 14+",
+              "url": "https://leoanimesh.github.io/OpenClean/",
+              "sameAs": ["https://github.com/leoAnimesh/OpenClean"],
+              "downloadUrl": "https://github.com/leoAnimesh/OpenClean/releases/latest",
+              "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+              "image": "https://leoanimesh.github.io/assets/icons/openclean.png",
               "author": { "@id": "https://leoanimesh.github.io/#person" }
             }
           }
@@ -431,7 +463,7 @@
           <span class="eyebrow mono">03 / Selected work</span>
           <h2 class="h2" id="work-h" data-split>Shipped systems &amp; solo products</h2>
         </div>
-        <p class="secintro">Three web products and three store apps I designed, built and shipped alone, the platform I lead at Zoca, and an open‑source devtool.</p>
+        <p class="secintro">Three web products and three store apps I designed, built and shipped alone, one more app on the way, the platform I lead at Zoca, and two open‑source tools.</p>
       </div>
 
       <div class="work">
@@ -572,6 +604,29 @@
         </div>
 
         <div data-reveal style="--d: 0ms">
+          <article class="card" data-spot data-tilt style="--tint: 212,160,60">
+            <div class="media">
+              <span class="kind mono">Solo indie</span><span class="plat mono">iOS · Android</span>
+              <img class="appicon" src="assets/icons/astropedia.png" alt="Astropedia app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>Astropedia</h3><p>Vedic astrology with an on‑device AI guide</p></div>
+              <ul class="chips"><li class="chip">On‑device AI</li><li class="chip">No account, no ads</li><li class="chip">English · हिन्दी · বাংলা</li></ul>
+              <ul class="bul">
+                <li>Kundli, Vimshottari dasha, panchang and Ashtakoota matching from the app’s own astronomy code.</li>
+                <li>Saga, a Gemma model I fine‑tuned for Vedic astrology, runs on the phone through ExecuTorch.</li>
+                <li>Positions come from the app, never the model; charts, chats and journal stay on the device.</li>
+              </ul>
+              <ul class="tags mono"><li>React Native</li><li>Expo</li><li>ExecuTorch</li><li>Gemma</li><li>SQLite</li><li>i18next</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://github.com/leoAnimesh/astropedia" target="_blank" rel="noopener">GitHub <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <span class="btn btn-ghost bordered btn-sm soon">App Store &amp; Google Play · coming soon</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 120ms">
           <article class="card" data-spot data-tilt style="--tint: 124,58,237">
             <div class="media">
               <span class="kind mono">Enterprise SaaS</span><span class="plat mono">iOS · Android · Web</span>
@@ -594,7 +649,7 @@
           </article>
         </div>
 
-        <div data-reveal style="--d: 120ms">
+        <div data-reveal style="--d: 0ms">
           <article class="card" data-spot data-tilt style="--tint: 132,204,22">
             <div class="media">
               <span class="kind mono">Open source</span><span class="plat mono">Chrome · Web</span>
@@ -612,6 +667,29 @@
               <div class="ctas">
                 <a class="btn btn-primary btn-sm" href="https://github.com/repruvia/repruvia.github.io" target="_blank" rel="noopener">GitHub <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
                 <a class="btn btn-secondary btn-sm" href="https://repruvia.github.io" target="_blank" rel="noopener">Live app <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--d: 120ms">
+          <article class="card" data-spot data-tilt style="--tint: 18,168,139">
+            <div class="media">
+              <span class="kind mono">Open source</span><span class="plat mono">macOS · CLI</span>
+              <img class="appicon" src="assets/icons/openclean.png" alt="OpenClean app icon" width="96" height="96" loading="lazy" decoding="async" />
+            </div>
+            <div class="cbody">
+              <div class="ctitle"><h3>OpenClean</h3><p>Free, open‑source Mac cleaner with undo</p></div>
+              <ul class="chips"><li class="chip">GPL‑3.0</li><li class="chip">Quarantine &amp; restore</li><li class="chip">No telemetry</li></ul>
+              <ul class="bul">
+                <li>Smart Scan, Uninstaller, Space Lens disk map, duplicate finder and a live menu bar monitor.</li>
+                <li>Every cleaning rule is readable YAML with a safety level and reason, linted in CI.</li>
+                <li>Signed, notarized app with a Homebrew cask, in‑place updates and a scriptable JSON CLI.</li>
+              </ul>
+              <ul class="tags mono"><li>Swift 6</li><li>SwiftUI</li><li>Swift Concurrency</li><li>Yams</li><li>ArgumentParser</li><li>Homebrew</li></ul>
+              <div class="ctas">
+                <a class="btn btn-primary btn-sm" href="https://github.com/leoAnimesh/OpenClean" target="_blank" rel="noopener">GitHub <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+                <a class="btn btn-secondary btn-sm" href="https://leoanimesh.github.io/OpenClean/" target="_blank" rel="noopener">Website <svg class="i-ne" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
               </div>
             </div>
           </article>
